@@ -1,0 +1,86 @@
+footer {
+	background-color: rgba($color--primary,0.9);
+	padding: $padding--general 0;
+	i {
+		color: $color--white;
+		margin-right: $margin--small*0.5;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	i.inactive {
+	  cursor: not-allowed;
+	  color: rgba($color--white,0.3);
+	}
+	.highlight {
+		color: $color--highlight-light;
+	}
+	a {
+		color: $color--white;
+		&:hover {
+			color: $color--highlight-light;
+		}
+		& i {
+			transition: 0.3s;
+			&:hover {
+				color: $color--secondary;
+			}	
+		}
+	}
+}
+
+@media (min-width: $media-mobile) {
+	footer {
+		padding: $padding--general*2 0;
+	}
+}
+
+@media (min-width: $media-tablet) {
+	footer {
+		padding: $padding--general*3 0;
+	}
+}
+
+.mol__unit-whoweare {
+	& p {
+		font-size: 2rem;
+		line-height: 1.4;
+		color: $color--white;
+		font-weight: 400;
+		letter-spacing: 0.01em;
+		padding-right: $padding--general*2;
+	}
+	& p.atm__copyright {
+		color: rgba($color--white,0.4);
+ 		margin-top: $padding--general;
+  		font-size: 0.8rem;
+	}
+}
+
+@media (min-width: $media-tablet) {
+	.mol__unit-whoweare {
+		& p.atm__copyright {
+	 		margin-top: $padding--general*2;
+		}
+	}
+}
+
+
+.mol__unit-contact {
+  border-top: solid 1px $color--highlight-dark;
+  padding-top: $padding--small;
+  margin-bottom: $margin--small*3;
+  color: white;
+  &:last-child {
+  	margin-bottom: 0;
+  }
+  & h4 {
+  	@include headingUC;
+  	color: $color--secondary;
+  	font-size: 0.9rem;
+  	margin-bottom: 8px;
+  }
+  & span {
+  	font-size: 1.2rem;
+  }
+}

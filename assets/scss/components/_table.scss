@@ -1,0 +1,35 @@
+table.mol--table {
+	color: $color--primary;
+	& tr {
+		opacity: 0.6;
+		&:hover {
+			transition: 0.3s;
+			background-color: rgba($color--primary, 0.05);
+		}
+		&.atm--qualified {
+			opacity: 1
+		}
+		& td {
+			padding: 10px;
+			&.atm--name, &.atm--points {
+				font-family: $brand--font-semi;
+			}
+		}
+	}
+	& thead {
+		color: $color--primary;
+		background-color: rgba($color--primary, 0.1);
+		& tr {
+			opacity: 1;
+			color: $color--primary;
+			& th {
+				font-family: $brand--font-bold;
+				font-size: 0.8rem;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				padding-top: 15px;
+				padding-bottom: 15px;
+			}
+		}
+	}
+}

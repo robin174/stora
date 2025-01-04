@@ -1,0 +1,37 @@
+@import "bourbon";
+
+/* Initial sizing - set in 'helpers' - '_variables.scss' */
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Larger than mobile */
+@media (min-width: 576px) {}
+
+/* Larger than small tablet */
+@media (min-width: 768px) {}
+
+/* Larger than tablet */
+@media (min-width: 992px) {}
+
+/* Larger than desktop */
+@media (min-width: 1200px) {}
+
+
+
+a {
+	transition: 0.3s;
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1400px) {
+	.container-fluid {
+		padding: 0 180px;
+	}
+}

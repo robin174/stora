@@ -1,0 +1,16 @@
+a[class*="atm--button-"] {
+	transition: 0.4s;
+	text-decoration: none;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+button.atm--button-primary {
+	color: $color--white;
+	background-color: $color--primary;
+	&:hover {
+		color: $color--white;
+		background-color: $color--tertiary;
+	}
+}

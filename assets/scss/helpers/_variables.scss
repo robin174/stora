@@ -1,0 +1,116 @@
+/* Colors
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$color--primary: #000A2B; // #00104C = Dark navy bluelue
+$color--secondary: #df0914;
+$color--tertiary: #798d91;
+$color--white: #fff; // white
+$color--black: #000; // black
+
+$color--highlight-light: $color--secondary;
+$color--highlight-dark: $color--secondary;
+
+$box--shadow-light: 0 0 10px rgba(0,0,0,0.3); 
+$box--shadow-dark: 0 0 10px rgba(0,0,0,0.7); 
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$media-mobile: 576px;
+$media-tablet: 768px;
+$media-desktop: 992px;
+$media-wide: 1200px; 
+
+/* Fonts
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// Myfonts.com - use the 'Webfont Kit Download' configuration
+@import url("//hello.myfonts.net/count/3e7d84");
+
+@font-face {
+    font-family: 'AvertaStdPE-Regular';
+    src: url('fonts/AvertaStdPERegular/font.woff2') format('woff2'), url('../fonts/AvertaStdPERegular/font.woff') format('woff');
+}
+@font-face {
+    font-family: 'AvertaStdPE-Semibold';
+    src: url('fonts/AvertaStdPESemibold/font.woff2') format('woff2'), url('../fonts/AvertaStdPESemibold/font.woff') format('woff');
+}
+@font-face {
+    font-family: 'AvertaStdPE-Bold';
+    src: url('fonts/AvertaStdPEBold/font.woff2') format('woff2'), url('../fonts/AvertaStdPEBold/font.woff') format('woff');
+}
+
+$brand--font-reg: 'AvertaStdPE-Regular', Arial, Helvetica, sans-serif;
+$brand--font-semi: 'AvertaStdPE-Semibold', Arial, Helvetica, sans-serif;
+$brand--font-bold: 'AvertaStdPE-Bold', Arial, Helvetica, sans-serif;
+
+/* Variable Font Sizes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Body font size. By default 16px, based on 16px as 'root em' */
+$brand--font-size: 1rem;
+
+/* Major second scale progression - see https://type-scale.com/ */
+$brand--header-scale: 1.125;
+
+/* Line height is set to the "Golden ratio" for optimal legibility */
+$brand--line-height: 1.618;
+
+body {
+    font-family: $brand--font-reg;
+    line-height: $brand--line-height;
+}
+
+h1, h2, h4, h4, h5, h6 {
+    font-family: $brand--font-bold;
+}
+
+h1 {
+    font-size: $brand--font-size * $brand--header-scale * $brand--header-scale * $brand--header-scale * $brand--header-scale;
+    //margin-bottom: $brand--line-height * 1.5rem;
+}
+
+h2 {
+    font-size: $brand--font-size * $brand--header-scale * $brand--header-scale * $brand--header-scale;
+    //margin-bottom: $brand--line-height * 1.5rem;
+}
+
+h3 {
+    font-size: $brand--font-size * $brand--header-scale * $brand--header-scale;
+    //margin-bottom: $brand--line-height * 1.5rem;
+}
+
+h4 {
+    font-size: $brand--font-size * $brand--header-scale;
+    //margin-bottom: $brand--line-height * 1.5rem;
+}
+
+h5 {
+    font-size: $brand--font-size;
+    //margin-bottom: $brand--line-height * 1.5rem;
+}
+
+h6 {
+    font-size: calc($brand--font-size / $brand--header-scale);
+    //margin-bottom: $brand--line-height* 1.5rem;
+}
+
+
+/* Initial sizing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*  NOTE. html is set to 62.5% so that all the REM measurements throughout Skeleton are based on 10px sizing. So basically 1.5rem = 15px */
+/*  NOTE. If normal, 100% equals 16px sizing. */
+html {
+    font-size: 100%; 
+}
+
+body {
+	color: $color--primary;
+	font-family: $brand--font-reg;
+	font-size: 1em; /* currently ems because Chrome bug misinterpreting rems on body element */
+}
+
+$base-value: 1rem; // To test: rems/ems/px
+
+$margin--xsmall: $base-value*0.5;
+$margin--small: $base-value;
+$margin--general: $base-value*2;
+$padding--xsmall: $base-value*0.5;
+$padding--small: $base-value;
+$padding--general: $base-value*2;

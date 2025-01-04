@@ -1,0 +1,11 @@
+@mixin headingUC {
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	font-family: $brand--font-bold;
+}
+
+@mixin navigationUC {
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	font-family: $brand--font-semi;
+}

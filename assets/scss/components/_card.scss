@@ -1,0 +1,24 @@
+.card {
+	height: 220px;
+	padding: 10px;
+	background-color: #ddd;
+	color: black;
+	display: flex;
+	align-items: left;
+	justify-content: center;
+	cursor: pointer;
+	transition: transform 0.2s;
+	& h3.provider {
+		font-size: 1rem;
+		font-style: bold;
+	}
+	& h4.cost {
+		font-size: 0.9rem;
+	}
+}
+
+/* 
+.card:active {
+	transform: scale(1.05); 
+}
+*/

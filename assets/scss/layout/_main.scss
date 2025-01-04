@@ -1,0 +1,46 @@
+.templ--page-main {
+	margin: 0; // No need for margin as PNG includes padding 
+	margin-bottom: $margin--general;
+}
+
+@media (min-width: $media-mobile) {
+	.templ--page-main {
+		margin: $margin--general 0;
+	}
+}
+
+@media (min-width: $media-tablet) {
+	.templ--page-main {
+		margin: $margin--general*2 0;
+	}
+}
+
+.mol--response {
+	margin-top: $margin--small;
+	padding: $padding--small;
+	border-radius: 10px;
+	background-color: #eeeeee;
+	& span.ut--small {
+		font-size:0.8rem;
+	}
+}
+
+.templ--page-drag {
+	& .mol--columns {
+		padding: 10px;
+		background: rgba(0,0,0,0.02);
+	}
+	& .col-head {
+		height: 80px;
+	}
+	& .col {
+		padding: 5px;
+		margin: 5px 0;
+		border: 1px dashed #ccc;
+		position: relative;
+	}
+	& div[id*="total-column-"] {
+		font-size: 1.4rem;
+	}
+
+}
