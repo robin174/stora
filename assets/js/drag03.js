@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Fetch data from Airtable
     async function fetchAirtableData() {
     try {
-            const response = await fetch("http://localhost:3000/data");
+            const response = await fetch("http://localhost:3010/data");
             if (!response.ok) throw new Error("Failed to fetch data from backend");
 
             const data = await response.json();
