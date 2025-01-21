@@ -9,6 +9,9 @@ get_header(); ?>
 <section class="templ--page-drag">
 	<div class="container">
         <div class="row">
+            <div class="col-12">
+                <p>This version talked directly to Airtable and not via the Node backend.</p>
+            </div>
             <div class="col-2">
                 <section class="mol--columns">
                     <h3>Status quo (cloud costs)</h3>
