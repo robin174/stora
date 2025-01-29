@@ -11,12 +11,40 @@ get_header(); ?>
         <div class="row">
             <div class="col-12">
                 <p>This version is the correct flow from Airtable -> Backend (node) to Frontend</p>
+                <p>Locally remember to spin-up app.js)</p>
             </div>
+
             <div class="col-2">
                 <section class="mol--columns">
                     <h3>Status quo (cloud costs)</h3>
                 </section>
             </div>
+
+            <div class="col-8">
+                <section class="mol--columns">
+                    <div class="row justify-content-center col-head">
+                        <div class="col"><h2>Cloud</h2></div>
+                        <div class="col"><h2>Decentralized</h2></div>
+                        <div class="col"><h2>On Prem</h2></div>
+                    </div>
+                    <div class="row justify-content-center" data-row="1">
+                        <div class="col" data-column="1">
+                            <?php get_template_part('template-parts/card-drag', null, ['card_id' => 1]); ?>
+                            <?php /* We're now going to offer up the version fo the card that is a local data / modal */ ?>
+                        </div>
+                        <div class="col" data-column="2"></div>
+                        <div class="col" data-column="3"></div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 
+            So we need this structure in place. Where we have columns and rows. 
+            And then we want to pull in the right template 'card' - we have this version and then we have the new modal version. 
+            Separation of concerns.
+            -->
+
+            <?php /*
             <div class="col-8">
                 <section class="mol--columns">
                     <div class="row justify-content-center col-head">
@@ -32,7 +60,6 @@ get_header(); ?>
                         </div>
                         <div class="col" data-column="2"></div>
                         <div class="col" data-column="3"></div>
-                        
                     </div>
                     <div class="row justify-content-center" data-row="2">
                         <div class="col" data-column="1">
@@ -83,6 +110,9 @@ get_header(); ?>
                     </div>
                 </section>
             </div>
+
+            */ ?>
+
             <div class="col-2">
                 <section class="mol--columns">
                 <h3>Row calculations</h3>
@@ -92,6 +122,6 @@ get_header(); ?>
 	</div>
 </section>
 
-<script src="<?php echo get_template_directory_uri(); ?>/assets/js/drag03.js?version=1.3"></script>
+<?php /* script is enqueued via functions.php */ ?>
 
 <?php get_footer(); ?>

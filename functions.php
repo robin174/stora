@@ -88,3 +88,37 @@ add_action( 'after_setup_theme', 'stora_setup');
 
 /* Load custom WordPress nav walker */
 require_once THEME_DIR_PATH . '/includes/wp-bootstrap-navwalker5.php';
+
+
+
+// Pass Airtable Data to JavaScript Using wp_localize_script
+// Instead of fetching directly via JavaScript, let WordPress provide the API URL.
+function enqueue_custom_scripts() {
+    wp_enqueue_script('custom-script', get_template_directory_uri() . '/assets/js/drag03.js', ['jquery'], null, true);
+
+    // Pass the correct API URL based on the environment
+    wp_localize_script('custom-script', 'wpData', [
+        'api_url' => AIRTABLE_API_URL
+    ]);
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+
+
+// Create a Custom API Endpoint for Airtable
+function fetch_airtable_data() {
+    $response = wp_remote_get("http://localhost:3010/data");
+
+    if (is_wp_error($response)) {
+        return new WP_Error('error', 'Failed to fetch Airtable data', ['status' => 500]);
+    }
+
+    $body = wp_remote_retrieve_body($response);
+    return rest_ensure_response(json_decode($body, true));
+}
+
+add_action('rest_api_init', function () {
+    register_rest_route('custom/v1', '/airtable', [
+        'methods'  => 'GET',
+        'callback' => 'fetch_airtable_data'
+    ]);
+});
