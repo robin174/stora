@@ -171,55 +171,63 @@ get_header(); ?>
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    var cardElements = document.querySelectorAll("[data-card-id]");
-    var cardModalEl = document.getElementById("cardModal");
-    var cardModal = new bootstrap.Modal(cardModalEl, { backdrop: 'static' }); // Prevent accidental clicks closing modal
-    var currentCard = null;
+    document.addEventListener("DOMContentLoaded", function () {
+        var cardElements = document.querySelectorAll("[data-card-id]");
+        var cardModalEl = document.getElementById("cardModal");
+        var cardModal = new bootstrap.Modal(cardModalEl, { backdrop: 'static' }); // Prevent accidental clicks closing modal
+        var currentCard = null;
 
-    // Open modal when clicking on a card
-    cardElements.forEach(function (card) {
-        card.addEventListener("click", function () {
-            currentCard = this;
-            var cardId = this.getAttribute("data-card-id");
-            var cardTitle = this.querySelector(".card-title").textContent;
-            var cardNumber = this.querySelector(".card-text").textContent.replace("Number: ", "");
+        // Open modal when clicking on a card
+        cardElements.forEach(function (card) {
+            card.addEventListener("click", function () {
+                currentCard = this;
+                var cardId = this.getAttribute("data-card-id");
+                var cardTitle = this.querySelector(".card-title").textContent;
+                var cardNumber = this.querySelector(".card-text").textContent.replace("Number: ", "");
 
-            document.getElementById("cardTitle").value = cardTitle;
-            document.getElementById("cardNumber").value = cardNumber;
+                document.getElementById("cardTitle").value = cardTitle;
+                document.getElementById("cardNumber").value = cardNumber;
 
-            cardModal.show();
+                cardModal.show();
+            });
         });
+
+        // Save and close button functionality
+        document.getElementById("saveCardButton").addEventListener("click", function () {
+            if (!currentCard) {
+                console.warn("No card selected before saving.");
+                return;
+            }
+
+            var cardTitle = document.getElementById("cardTitle").value;
+            var cardNumber = document.getElementById("cardNumber").value;
+
+            if (currentCard.querySelector(".card-title")) {
+                currentCard.querySelector(".card-title").textContent = cardTitle;
+            }
+            if (currentCard.querySelector(".card-text")) {
+                currentCard.querySelector(".card-text").textContent = `Number: ${cardNumber}`;
+            }
+
+            closeModalFully();
+            updateColumnTotals();
+        });
+
+        function closeModalFully() {
+            cardModal.hide(); // Hide modal
+
+            setTimeout(() => {
+                document.body.classList.remove("modal-open"); // Remove Bootstrap modal-open class
+                document.getElementById("cardModal").addEventListener("hidden.bs.modal", function () {
+                    document.body.classList.remove("modal-open");
+                });
+            }, 300); // Delay to ensure proper cleanup
+        }
+
+        function updateColumnTotals() {
+            console.log("Updating column totals...");
+        }
     });
-
-    // Save and close button functionality
-    document.getElementById("saveCardButton").addEventListener("click", function () {
-        if (!currentCard) return;
-
-        var cardTitle = document.getElementById("cardTitle").value;
-        var cardNumber = document.getElementById("cardNumber").value;
-
-        currentCard.querySelector(".card-title").textContent = cardTitle;
-        currentCard.querySelector(".card-text").textContent = `Number: ${cardNumber}`;
-
-        closeModalFully(); // Properly close modal
-        updateColumnTotals();
-    });
-
-    function closeModalFully() {
-        cardModal.hide(); // Hide modal
-
-        setTimeout(() => {
-            document.body.classList.remove("modal-open"); // Remove Bootstrap modal-open class
-            var modalBackdrop = document.querySelector(".modal-backdrop");
-            if (modalBackdrop) modalBackdrop.remove(); // Remove the backdrop manually
-        }, 300); // Delay to ensure proper cleanup
-    }
-
-    function updateColumnTotals() {
-        console.log("Updating column totals...");
-    }
-});
 </script>
 
 <?php get_footer(); ?>
