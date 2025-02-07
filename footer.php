@@ -6,6 +6,7 @@
 ?>
 		</main><!-- end main -->
 		<footer>
+			<?php get_template_part('template-parts/modal'); ?>
 			<div class="container-fluid">
                 <div class="row">
                     <div class="col-12 col-md-6">

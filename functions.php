@@ -94,7 +94,8 @@ require_once THEME_DIR_PATH . '/includes/wp-bootstrap-navwalker5.php';
 // Pass Airtable Data to JavaScript Using wp_localize_script
 // Instead of fetching directly via JavaScript, let WordPress provide the API URL.
 function enqueue_custom_scripts() {
-    wp_enqueue_script('custom-script', get_template_directory_uri() . '/assets/js/drag03.js', ['jquery'], null, true);
+    wp_enqueue_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js', [], null, true);
+    wp_enqueue_script('custom-script', get_template_directory_uri() . '/assets/js/drag03-modal.js', ['jquery'], null, true);
 
     // Pass the correct API URL based on the environment
     wp_localize_script('custom-script', 'wpData', [
@@ -102,7 +103,6 @@ function enqueue_custom_scripts() {
     ]);
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
-
 
 // Create a Custom API Endpoint for Airtable
 function fetch_airtable_data() {

@@ -10,14 +10,26 @@ get_header(); ?>
 	<div class="container">
         <div class="row">
             <div class="col-12">
-                <p>This version is the correct flow from Airtable -> Backend (node) to Frontend</p>
-                <p>Locally remember to spin-up app.js)</p>
+                <div style="padding: 30px 0">
+                    <h3>This version is the correct flow from Airtable -> Backend (node) to Frontend.</h3>
+                    <h4>Locally, remember to spin-up app.js (backend) to pull in prices.</h4>
+                </div>
             </div>
 
             <div class="col-2">
                 <section class="mol--columns">
                     <h3>Status quo (cloud costs)</h3>
                 </section>
+                <div>
+                    <p>Next step:</p>
+                    <ul>
+                        <li>Working in VSC</li>
+                        <li>Re-introduce drag and drop</li>
+                        <li>Modal, set number and select system</li>
+                        <li>Implement simple 'total cost' with card</li>
+                        <li>Design! And that will be that.</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="col-8">
@@ -29,10 +41,12 @@ get_header(); ?>
                     </div>
                     <div class="row justify-content-center" data-row="1">
                         <div class="col" data-column="1">
-                            <?php get_template_part('template-parts/card-drag', null, ['card_id' => 1]); ?>
-                            <?php /* We're now going to offer up the version fo the card that is a local data / modal */ ?>
+                            <?php /* get_template_part('template-parts/card-drag', null, ['card_id' => 1]); */ ?>
+                            <?php get_template_part('template-parts/card-modal', null, ['card_id' => 1, 'card_title' => 'Cloud Storage', 'card_number' => '10']); ?>
                         </div>
-                        <div class="col" data-column="2"></div>
+                        <div class="col" data-column="2">
+                            <?php get_template_part('template-parts/card-modal', null, ['card_id' => 2, 'card_title' => 'Decentralized Storage', 'card_number' => '20']); ?>
+                        </div>
                         <div class="col" data-column="3"></div>
                     </div>
                 </section>
@@ -113,15 +127,99 @@ get_header(); ?>
 
             */ ?>
 
-            <div class="col-2">
-                <section class="mol--columns">
+            <section class="mol--columns">
                 <h3>Row calculations</h3>
-                <section>
+            </section>
             </div>
         </div>  
 	</div>
 </section>
 
-<?php /* script is enqueued via functions.php */ ?>
+<!-- Modal HTML -->
+<div class="modal fade" id="cardModal" tabindex="-1" aria-labelledby="cardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cardModalLabel">Edit Card</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="cardForm">
+                    <div class="mb-3">
+                        <label for="cardTitle" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="cardTitle">
+                    </div>
+                    <div class="mb-3">
+                        <label for="cardNumber" class="form-label">Number of TBs</label>
+                        <input type="number" class="form-control" id="cardNumber" min="0">
+                    </div>
+                    <div class="mb-3">
+                        <label for="cardProvider" class="form-label">Provider</label>
+                        <select class="form-select" id="cardProvider">
+                            <option value="0">Please select</option>
+                            <!-- Options will be populated dynamically -->
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="saveCardButton">Save and close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var cardElements = document.querySelectorAll("[data-card-id]");
+    var cardModalEl = document.getElementById("cardModal");
+    var cardModal = new bootstrap.Modal(cardModalEl, { backdrop: 'static' }); // Prevent accidental clicks closing modal
+    var currentCard = null;
+
+    // Open modal when clicking on a card
+    cardElements.forEach(function (card) {
+        card.addEventListener("click", function () {
+            currentCard = this;
+            var cardId = this.getAttribute("data-card-id");
+            var cardTitle = this.querySelector(".card-title").textContent;
+            var cardNumber = this.querySelector(".card-text").textContent.replace("Number: ", "");
+
+            document.getElementById("cardTitle").value = cardTitle;
+            document.getElementById("cardNumber").value = cardNumber;
+
+            cardModal.show();
+        });
+    });
+
+    // Save and close button functionality
+    document.getElementById("saveCardButton").addEventListener("click", function () {
+        if (!currentCard) return;
+
+        var cardTitle = document.getElementById("cardTitle").value;
+        var cardNumber = document.getElementById("cardNumber").value;
+
+        currentCard.querySelector(".card-title").textContent = cardTitle;
+        currentCard.querySelector(".card-text").textContent = `Number: ${cardNumber}`;
+
+        closeModalFully(); // Properly close modal
+        updateColumnTotals();
+    });
+
+    function closeModalFully() {
+        cardModal.hide(); // Hide modal
+
+        setTimeout(() => {
+            document.body.classList.remove("modal-open"); // Remove Bootstrap modal-open class
+            var modalBackdrop = document.querySelector(".modal-backdrop");
+            if (modalBackdrop) modalBackdrop.remove(); // Remove the backdrop manually
+        }, 300); // Delay to ensure proper cleanup
+    }
+
+    function updateColumnTotals() {
+        console.log("Updating column totals...");
+    }
+});
+</script>
 
 <?php get_footer(); ?>

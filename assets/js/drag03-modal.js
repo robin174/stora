@@ -13,12 +13,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Fetch data from Airtable
     async function fetchAirtableData() {
         try {
-            console.log("Fetching from:", wpData.api_url); // Debugging: check which URL is being used
             const response = await fetch(wpData.api_url);
             if (!response.ok) throw new Error("Failed to fetch data from API");
 
-            const data = await response.json();
-            return data;
+            airtableData = await response.json(); // Store the data globally
+            return airtableData;
         } catch (error) {
             console.error(error.message);
             return [];
