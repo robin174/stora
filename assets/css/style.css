@@ -7,17 +7,17 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @import url("//hello.myfonts.net/count/3e7d84");
 @font-face {
-  font-family: 'AvertaStdPE-Regular';
-  src: url("fonts/AvertaStdPERegular/font.woff2") format("woff2"), url("../fonts/AvertaStdPERegular/font.woff") format("woff"); }
-
+  font-family: "AvertaStdPE-Regular";
+  src: url("fonts/AvertaStdPERegular/font.woff2") format("woff2"), url("../fonts/AvertaStdPERegular/font.woff") format("woff");
+}
 @font-face {
-  font-family: 'AvertaStdPE-Semibold';
-  src: url("fonts/AvertaStdPESemibold/font.woff2") format("woff2"), url("../fonts/AvertaStdPESemibold/font.woff") format("woff"); }
-
+  font-family: "AvertaStdPE-Semibold";
+  src: url("fonts/AvertaStdPESemibold/font.woff2") format("woff2"), url("../fonts/AvertaStdPESemibold/font.woff") format("woff");
+}
 @font-face {
-  font-family: 'AvertaStdPE-Bold';
-  src: url("fonts/AvertaStdPEBold/font.woff2") format("woff2"), url("../fonts/AvertaStdPEBold/font.woff") format("woff"); }
-
+  font-family: "AvertaStdPE-Bold";
+  src: url("fonts/AvertaStdPEBold/font.woff2") format("woff2"), url("../fonts/AvertaStdPEBold/font.woff") format("woff");
+}
 /* Variable Font Sizes
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Body font size. By default 16px, based on 16px as 'root em' */
@@ -25,41 +25,50 @@
 /* Line height is set to the "Golden ratio" for optimal legibility */
 body {
   font-family: "AvertaStdPE-Regular", Arial, Helvetica, sans-serif;
-  line-height: 1.618; }
+  line-height: 1.618;
+}
 
 h1, h2, h4, h4, h5, h6 {
-  font-family: "AvertaStdPE-Bold", Arial, Helvetica, sans-serif; }
+  font-family: "AvertaStdPE-Bold", Arial, Helvetica, sans-serif;
+}
 
 h1 {
-  font-size: 1.6018066406rem; }
+  font-size: 1.6018066406rem;
+}
 
 h2 {
-  font-size: 1.423828125rem; }
+  font-size: 1.423828125rem;
+}
 
 h3 {
-  font-size: 1.265625rem; }
+  font-size: 1.265625rem;
+}
 
 h4 {
-  font-size: 1.125rem; }
+  font-size: 1.125rem;
+}
 
 h5 {
-  font-size: 1rem; }
+  font-size: 1rem;
+}
 
 h6 {
-  font-size: calc($brand--font-size / $brand--header-scale); }
+  font-size: 0.8888888889rem;
+}
 
 /* Initial sizing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*  NOTE. html is set to 62.5% so that all the REM measurements throughout Skeleton are based on 10px sizing. So basically 1.5rem = 15px */
 /*  NOTE. If normal, 100% equals 16px sizing. */
 html {
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 body {
   color: #000A2B;
   font-family: "AvertaStdPE-Regular", Arial, Helvetica, sans-serif;
-  font-size: 1em;
-  /* currently ems because Chrome bug misinterpreting rems on body element */ }
+  font-size: 1em; /* currently ems because Chrome bug misinterpreting rems on body element */
+}
 
 /* Initial sizing - set in 'helpers' - '_variables.scss' */
 /* Media Queries
@@ -69,33 +78,40 @@ body {
 /* Larger than tablet */
 /* Larger than desktop */
 a {
-  transition: 0.3s; }
+  transition: 0.3s;
+}
 
 @media (min-width: 1400px) {
   .container-fluid {
-    padding: 0 180px; } }
-
+    padding: 0 180px;
+  }
+}
 h2 {
   color: #000A2B;
-  font-size: 2rem; }
+  font-size: 2rem;
+}
 
 h5 {
-  font-size: 0.9rem; }
+  font-size: 0.9rem;
+}
 
 .ut--uc {
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  font-family: "AvertaStdPE-Bold", Arial, Helvetica, sans-serif; }
+  font-family: "AvertaStdPE-Bold", Arial, Helvetica, sans-serif;
+}
 
 blockquote {
   margin: 0;
   padding: 0;
-  font-size: 1.1rem; }
-  blockquote cite {
-    margin: 0;
-    padding: 0;
-    display: block;
-    font-style: normal; }
+  font-size: 1.1rem;
+}
+blockquote cite {
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-style: normal;
+}
 
 footer blockquote {
   margin-right: 4rem;
@@ -103,31 +119,38 @@ footer blockquote {
   line-height: 1.4;
   color: #fff;
   font-weight: 400;
-  letter-spacing: 0.01em; }
-  footer blockquote cite {
-    margin-top: 10px;
-    font-size: 1.4rem;
-    line-height: 1.5;
-    color: #df0914; }
-    footer blockquote cite span.context {
-      margin-top: 5px;
-      display: block;
-      font-size: 0.9rem;
-      line-height: 1.2;
-      color: #df0914; }
+  letter-spacing: 0.01em;
+}
+footer blockquote cite {
+  margin-top: 10px;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #df0914;
+}
+footer blockquote cite span.context {
+  margin-top: 5px;
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  color: #df0914;
+}
 
-a[class*="atm--button-"] {
+a[class*=atm--button-] {
   transition: 0.4s;
-  text-decoration: none; }
-  a[class*="atm--button-"]:hover {
-    cursor: pointer; }
+  text-decoration: none;
+}
+a[class*=atm--button-]:hover {
+  cursor: pointer;
+}
 
 button.atm--button-primary {
   color: #fff;
-  background-color: #000A2B; }
-  button.atm--button-primary:hover {
-    color: #fff;
-    background-color: #798d91; }
+  background-color: #000A2B;
+}
+button.atm--button-primary:hover {
+  color: #fff;
+  background-color: #798d91;
+}
 
 .card {
   height: 220px;
@@ -138,12 +161,15 @@ button.atm--button-primary {
   align-items: left;
   justify-content: center;
   cursor: pointer;
-  transition: transform 0.2s; }
-  .card h3.provider {
-    font-size: 1rem;
-    font-style: bold; }
-  .card h4.cost {
-    font-size: 0.9rem; }
+  transition: transform 0.2s;
+}
+.card h3.provider {
+  font-size: 1rem;
+  font-style: bold;
+}
+.card h4.cost {
+  font-size: 0.9rem;
+}
 
 /* 
 .card:active {
@@ -152,238 +178,306 @@ button.atm--button-primary {
 */
 figure {
   margin: 0;
-  padding: 0; }
-  figure.atm--headshot {
-    border: 10px solid white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+  padding: 0;
+}
+figure.atm--headshot {
+  border: 10px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
 
 label {
-  margin-top: 1rem; }
+  margin-top: 1rem;
+}
 
 .input-group {
-  margin: 0.5rem 0; }
+  margin: 0.5rem 0;
+}
 
 table.mol--table {
-  color: #000A2B; }
-  table.mol--table tr {
-    opacity: 0.6; }
-    table.mol--table tr:hover {
-      transition: 0.3s;
-      background-color: rgba(0, 10, 43, 0.05); }
-    table.mol--table tr.atm--qualified {
-      opacity: 1; }
-    table.mol--table tr td {
-      padding: 10px; }
-      table.mol--table tr td.atm--name, table.mol--table tr td.atm--points {
-        font-family: "AvertaStdPE-Semibold", Arial, Helvetica, sans-serif; }
-  table.mol--table thead {
-    color: #000A2B;
-    background-color: rgba(0, 10, 43, 0.1); }
-    table.mol--table thead tr {
-      opacity: 1;
-      color: #000A2B; }
-      table.mol--table thead tr th {
-        font-family: "AvertaStdPE-Bold", Arial, Helvetica, sans-serif;
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        padding-top: 15px;
-        padding-bottom: 15px; }
+  color: #000A2B;
+}
+table.mol--table tr {
+  opacity: 0.6;
+}
+table.mol--table tr:hover {
+  transition: 0.3s;
+  background-color: rgba(0, 10, 43, 0.05);
+}
+table.mol--table tr.atm--qualified {
+  opacity: 1;
+}
+table.mol--table tr td {
+  padding: 10px;
+}
+table.mol--table tr td.atm--name, table.mol--table tr td.atm--points {
+  font-family: "AvertaStdPE-Semibold", Arial, Helvetica, sans-serif;
+}
+table.mol--table thead {
+  color: #000A2B;
+  background-color: rgba(0, 10, 43, 0.1);
+}
+table.mol--table thead tr {
+  opacity: 1;
+  color: #000A2B;
+}
+table.mol--table thead tr th {
+  font-family: "AvertaStdPE-Bold", Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 
 header {
-  background-color: #000a2b; }
+  background-color: #000a2b;
+}
 
 nav a {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-family: "AvertaStdPE-Bold", Arial, Helvetica, sans-serif;
-  color: #fff; }
-  nav a:link {
-    color: #fff; }
-  nav a:visited {
-    color: #fff; }
-  nav a:hover {
-    color: #df0914; }
-  nav a:active {
-    color: #fff; }
-  nav a:disabled {
-    color: rgba(255, 255, 255, 0.3); }
+  color: #fff;
+}
+nav a:link {
+  color: #fff;
+}
+nav a:visited {
+  color: #fff;
+}
+nav a:hover {
+  color: #df0914;
+}
+nav a:active {
+  color: #fff;
+}
+nav a:disabled {
+  color: rgba(255, 255, 255, 0.3);
+}
 
 nav {
-  padding: 1rem 0; }
-  nav h1, nav h1 a.navbar-brand {
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    font-family: "AvertaStdPE-Bold", Arial, Helvetica, sans-serif;
-    font-family: "AvertaStdPE-Regular", Arial, Helvetica, sans-serif;
-    font-size: 0.9rem;
-    color: #fff;
-    margin-bottom: 0; }
-  nav h1 a.navbar-brand:hover {
-    color: #df0914; }
-  nav a, nav .nav-link {
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    font-family: "AvertaStdPE-Semibold", Arial, Helvetica, sans-serif;
-    color: #fff; }
-    nav a:link, nav .nav-link:link {
-      color: #fff; }
-    nav a:visited, nav .nav-link:visited {
-      color: #fff; }
-    nav a:hover, nav .nav-link:hover {
-      color: #df0914; }
-    nav a:active, nav .nav-link:active {
-      color: #fff; }
-    nav a:disabled, nav .nav-link:disabled {
-      color: rgba(255, 255, 255, 0.3); }
+  padding: 1rem 0;
+}
+nav h1, nav h1 a.navbar-brand {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-family: "AvertaStdPE-Bold", Arial, Helvetica, sans-serif;
+  font-family: "AvertaStdPE-Regular", Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  color: #fff;
+  margin-bottom: 0;
+}
+nav h1 a.navbar-brand:hover {
+  color: #df0914;
+}
+nav a, nav .nav-link {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-family: "AvertaStdPE-Semibold", Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+nav a:link, nav .nav-link:link {
+  color: #fff;
+}
+nav a:visited, nav .nav-link:visited {
+  color: #fff;
+}
+nav a:hover, nav .nav-link:hover {
+  color: #df0914;
+}
+nav a:active, nav .nav-link:active {
+  color: #fff;
+}
+nav a:disabled, nav .nav-link:disabled {
+  color: rgba(255, 255, 255, 0.3);
+}
 
 .navbar button.atmButtonNav {
   background-color: rgba(255, 255, 255, 0.06);
-  border: 2px solid rgba(255, 255, 255, 0.12); }
-  .navbar button.atmButtonNav i {
-    color: #fff; }
-  .navbar button.atmButtonNav:hover {
-    color: red; }
+  border: 2px solid rgba(255, 255, 255, 0.12);
+}
+.navbar button.atmButtonNav i {
+  color: #fff;
+}
+.navbar button.atmButtonNav:hover {
+  color: red;
+}
 
 @media (max-width: 767px) {
   .offcanvas.offcanvas-end {
     backdrop-filter: blur(7px);
     background-color: rgba(17, 17, 17, 0.8);
     color: #fff;
-    border-left: 5px solid black; }
-    .offcanvas.offcanvas-end h2 {
-      color: white; }
-    .offcanvas.offcanvas-end .offcanvas-header {
-      padding-top: 40px;
-      padding-left: 30px;
-      padding-right: 30px; }
-    .offcanvas.offcanvas-end .offcanvas-body {
-      padding: 0; }
-    .offcanvas.offcanvas-end li.menu-item {
-      padding: 10px 0;
-      padding-left: 30px;
-      border-left: 7px solid #000;
-      background-color: rgba(0, 0, 0, 0.2); }
-      .offcanvas.offcanvas-end li.menu-item:hover {
-        background-color: rgba(0, 0, 0, 0.5);
-        border-left: 7px solid #df0914; }
-    .offcanvas.offcanvas-end li.current-menu-item, .offcanvas.offcanvas-end li.current-menu-item:hover {
-      background-color: black;
-      border-left: 7px solid #df0914; }
-      .offcanvas.offcanvas-end li.current-menu-item:hover, .offcanvas.offcanvas-end li.current-menu-item:hover:hover {
-        color: #df0914; }
-    .offcanvas.offcanvas-end .offcanvas-header button.btn-close {
-      background: unset;
-      opacity: unset;
-      background: yellow; }
-      .offcanvas.offcanvas-end .offcanvas-header button.btn-close i {
-        color: green; }
-        .offcanvas.offcanvas-end .offcanvas-header button.btn-close i:hover {
-          color: orange; } }
-
+    border-left: 5px solid black;
+  }
+  .offcanvas.offcanvas-end h2 {
+    color: white;
+  }
+  .offcanvas.offcanvas-end .offcanvas-header {
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .offcanvas.offcanvas-end .offcanvas-body {
+    padding: 0;
+  }
+  .offcanvas.offcanvas-end li.menu-item {
+    padding: 10px 0;
+    padding-left: 30px;
+    border-left: 7px solid #000;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .offcanvas.offcanvas-end li.menu-item:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-left: 7px solid #df0914;
+  }
+  .offcanvas.offcanvas-end li.current-menu-item, .offcanvas.offcanvas-end li.current-menu-item:hover {
+    background-color: rgb(0, 0, 0);
+    border-left: 7px solid #df0914;
+  }
+  .offcanvas.offcanvas-end li.current-menu-item:hover, .offcanvas.offcanvas-end li.current-menu-item:hover:hover {
+    color: #df0914;
+  }
+  .offcanvas.offcanvas-end .offcanvas-header button.btn-close {
+    background: unset;
+    opacity: unset;
+    background: yellow;
+  }
+  .offcanvas.offcanvas-end .offcanvas-header button.btn-close i {
+    color: green;
+  }
+  .offcanvas.offcanvas-end .offcanvas-header button.btn-close i:hover {
+    color: orange;
+  }
+}
 @media (min-width: 768px) {
   .offcanvas.offcanvas-end {
     backdrop-filter: unset;
-    background-color: unset; }
-    .offcanvas.offcanvas-end li.current-menu-item a, .offcanvas.offcanvas-end li.current-menu-item:hover a {
-      color: #df0914; } }
-
+    background-color: unset;
+  }
+  .offcanvas.offcanvas-end li.current-menu-item a, .offcanvas.offcanvas-end li.current-menu-item:hover a {
+    color: #df0914;
+  }
+}
 .templ--page-main {
   margin: 0;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+}
 
 @media (min-width: 576px) {
   .templ--page-main {
-    margin: 2rem 0; } }
-
+    margin: 2rem 0;
+  }
+}
 @media (min-width: 768px) {
   .templ--page-main {
-    margin: 4rem 0; } }
-
+    margin: 4rem 0;
+  }
+}
 .mol--response {
   margin-top: 1rem;
   padding: 1rem;
   border-radius: 10px;
-  background-color: #eeeeee; }
-  .mol--response span.ut--small {
-    font-size: 0.8rem; }
+  background-color: #eeeeee;
+}
+.mol--response span.ut--small {
+  font-size: 0.8rem;
+}
 
 .templ--page-drag .mol--columns {
   padding: 10px;
-  background: rgba(0, 0, 0, 0.02); }
-
+  background: rgba(0, 0, 0, 0.02);
+}
 .templ--page-drag .col-head {
-  height: 80px; }
-
+  height: 80px;
+}
 .templ--page-drag .col {
   padding: 5px;
   margin: 5px 0;
   border: 1px dashed #ccc;
-  position: relative; }
-
-.templ--page-drag div[id*="total-column-"] {
-  font-size: 1.4rem; }
+  position: relative;
+}
+.templ--page-drag div[id*=total-column-] {
+  font-size: 1.4rem;
+}
 
 footer {
   background-color: rgba(0, 10, 43, 0.9);
-  padding: 2rem 0; }
-  footer i {
-    color: #fff;
-    margin-right: 0.5rem; }
-    footer i:last-child {
-      margin-right: 0; }
-  footer i.inactive {
-    cursor: not-allowed;
-    color: rgba(255, 255, 255, 0.3); }
-  footer .highlight {
-    color: #df0914; }
-  footer a {
-    color: #fff; }
-    footer a:hover {
-      color: #df0914; }
-    footer a i {
-      transition: 0.3s; }
-      footer a i:hover {
-        color: #df0914; }
+  padding: 2rem 0;
+}
+footer i {
+  color: #fff;
+  margin-right: 0.5rem;
+}
+footer i:last-child {
+  margin-right: 0;
+}
+footer i.inactive {
+  cursor: not-allowed;
+  color: rgba(255, 255, 255, 0.3);
+}
+footer .highlight {
+  color: #df0914;
+}
+footer a {
+  color: #fff;
+}
+footer a:hover {
+  color: #df0914;
+}
+footer a i {
+  transition: 0.3s;
+}
+footer a i:hover {
+  color: #df0914;
+}
 
 @media (min-width: 576px) {
   footer {
-    padding: 4rem 0; } }
-
+    padding: 4rem 0;
+  }
+}
 @media (min-width: 768px) {
   footer {
-    padding: 6rem 0; } }
-
+    padding: 6rem 0;
+  }
+}
 .mol__unit-whoweare p {
   font-size: 2rem;
   line-height: 1.4;
   color: #fff;
   font-weight: 400;
   letter-spacing: 0.01em;
-  padding-right: 4rem; }
-
+  padding-right: 4rem;
+}
 .mol__unit-whoweare p.atm__copyright {
   color: rgba(255, 255, 255, 0.4);
   margin-top: 2rem;
-  font-size: 0.8rem; }
+  font-size: 0.8rem;
+}
 
 @media (min-width: 768px) {
   .mol__unit-whoweare p.atm__copyright {
-    margin-top: 4rem; } }
-
+    margin-top: 4rem;
+  }
+}
 .mol__unit-contact {
   border-top: solid 1px #df0914;
   padding-top: 1rem;
   margin-bottom: 3rem;
-  color: white; }
-  .mol__unit-contact:last-child {
-    margin-bottom: 0; }
-  .mol__unit-contact h4 {
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    font-family: "AvertaStdPE-Bold", Arial, Helvetica, sans-serif;
-    color: #df0914;
-    font-size: 0.9rem;
-    margin-bottom: 8px; }
-  .mol__unit-contact span {
-    font-size: 1.2rem; }
+  color: white;
+}
+.mol__unit-contact:last-child {
+  margin-bottom: 0;
+}
+.mol__unit-contact h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-family: "AvertaStdPE-Bold", Arial, Helvetica, sans-serif;
+  color: #df0914;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+.mol__unit-contact span {
+  font-size: 1.2rem;
+}

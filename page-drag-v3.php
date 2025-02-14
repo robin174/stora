@@ -172,23 +172,24 @@ get_header(); ?>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        var cardElements = document.querySelectorAll("[data-card-id]");
         var cardModalEl = document.getElementById("cardModal");
-        var cardModal = new bootstrap.Modal(cardModalEl, { backdrop: 'static' }); // Prevent accidental clicks closing modal
+        var cardModal = new bootstrap.Modal(cardModalEl, { backdrop: 'static' });
         var currentCard = null;
 
-        // Open modal when clicking on a card
-        cardElements.forEach(function (card) {
-            card.addEventListener("click", function () {
-                currentCard = this;
-                var cardId = this.getAttribute("data-card-id");
-                var cardTitle = this.querySelector(".card-title").textContent;
-                var cardNumber = this.querySelector(".card-text").textContent.replace("Number: ", "");
+        // Attach event listener only to "Edit" button, NOT the whole card
+        document.querySelectorAll(".btn-edit-card").forEach(function (button) {
+            button.addEventListener("click", function (event) {
+                event.stopPropagation(); // Prevent clicking the card from triggering modal
+
+                currentCard = this.closest(".card"); // Get the card the button is inside
+
+                var cardTitle = currentCard.querySelector(".card-title").textContent;
+                var cardNumber = currentCard.querySelector(".card-text").textContent.replace("Number: ", "");
 
                 document.getElementById("cardTitle").value = cardTitle;
                 document.getElementById("cardNumber").value = cardNumber;
 
-                cardModal.show();
+                cardModal.show(); // ✅ Correct Bootstrap way to open modal
             });
         });
 
@@ -209,24 +210,8 @@ get_header(); ?>
                 currentCard.querySelector(".card-text").textContent = `Number: ${cardNumber}`;
             }
 
-            closeModalFully();
-            updateColumnTotals();
+            cardModal.hide();
         });
-
-        function closeModalFully() {
-            cardModal.hide(); // Hide modal
-
-            setTimeout(() => {
-                document.body.classList.remove("modal-open"); // Remove Bootstrap modal-open class
-                document.getElementById("cardModal").addEventListener("hidden.bs.modal", function () {
-                    document.body.classList.remove("modal-open");
-                });
-            }, 300); // Delay to ensure proper cleanup
-        }
-
-        function updateColumnTotals() {
-            console.log("Updating column totals...");
-        }
     });
 </script>
 

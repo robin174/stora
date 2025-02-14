@@ -111,35 +111,57 @@
       "q" : 90,
       "rq" : 75
     },
-    "\/assets\/js\/drag02-min.js" : {
+    "\/assets\/js\/drag03-modal.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/assets\/js\/drag02-min-min.js",
+      "oAP" : "\/assets\/js\/drag03-modal-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/assets\/js\/drag02.js" : {
+    "\/assets\/js\/misc\/drag02-min.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/assets\/js\/drag02-min.js",
+      "oAP" : "\/assets\/js\/misc\/drag02-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/assets\/js\/stora01.js" : {
+    "\/assets\/js\/misc\/drag02.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/assets\/js\/stora01-min.js",
+      "oAP" : "\/assets\/js\/misc\/drag02-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/misc\/drag03.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/misc\/drag03-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/misc\/stora01.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/misc\/stora01-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -478,6 +500,14 @@
       "oAP" : "\/page-drag-v2.php",
       "oF" : 0
     },
+    "\/page-drag-v3.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/page-drag-v3.php",
+      "oF" : 0
+    },
     "\/page-home copy.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -585,6 +615,30 @@
       "oAP" : "\/style-min.css",
       "oF" : 0,
       "pg" : 0
+    },
+    "\/template-parts\/card-drag.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/template-parts\/card-drag.php",
+      "oF" : 0
+    },
+    "\/template-parts\/card-modal.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/template-parts\/card-modal.php",
+      "oF" : 0
+    },
+    "\/template-parts\/modal.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/template-parts\/modal.php",
+      "oF" : 0
     },
     "\/template-parts\/nav-walker5.php" : {
       "cB" : 0,

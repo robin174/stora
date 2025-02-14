@@ -1,3 +1,6 @@
+// Test
+console.log("API URL being used:", wpData.api_url);
+
 document.addEventListener("DOMContentLoaded", async () => {
     const columns = document.querySelectorAll(".col");
 
