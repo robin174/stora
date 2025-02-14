@@ -5,13 +5,14 @@
 * @package stora    
 */
 
+error_log("AIRTABLE_API_URL from wp-config.php: " . (defined('AIRTABLE_API_URL') ? AIRTABLE_API_URL : "NOT DEFINED"));
+
 /* TODO: cross-reference with SmilePl and Foundation. */
 /* Set container width here? */
 
 /* Store the theme's directory path and uri in constants */
 define('THEME_DIR_PATH', get_template_directory());
 define('THEME_DIR_URI', get_template_directory_uri());
-
 
 /* Timestamp css files (works on js too):
 https://www.youtube.com/watch?v=kHp_yz3_6rI */

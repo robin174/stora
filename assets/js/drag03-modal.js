@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     let airtableData = [];
 
+    console.log("Fetching from API URL:", wpData.api_url);
+
     // Fetch data from Airtable
     async function fetchAirtableData() {
         try {
