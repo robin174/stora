@@ -176,21 +176,17 @@ button.atm--button-primary:hover {
 	transform: scale(1.05); 
 }
 */
-figure {
-  margin: 0;
-  padding: 0;
-}
-figure.atm--headshot {
-  border: 10px solid white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
 label {
   margin-top: 1rem;
 }
 
 .input-group {
   margin: 0.5rem 0;
+}
+
+.modal .modal-body .form-label {
+  font-weight: bold;
+  font-size: 0.9rem;
 }
 
 table.mol--table {
