@@ -16,6 +16,7 @@ get_header(); ?>
                     <!-- 
                         1. Origin column?
                         2. Implement a sample design
+                        3. Loading aspect to the data coming in... issue on live
                     -->
                 </div>
             </div>
