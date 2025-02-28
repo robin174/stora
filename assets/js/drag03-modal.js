@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         const cardTitle = document.getElementById("cardTitle").value;
         const providerSelect = document.getElementById("cardProvider");
         const selectedProvider = providerSelect.value;
-        const providerPrice = providerSelect.options[providerSelect.selectedIndex].dataset.price || "0";
+        const providerPrice = providerSelect.options[providerSelect.selectedIndex].dataset.price || "0.00";
         const cardNumber = document.getElementById("cardNumber").value;
         const totalCost = (cardNumber * providerPrice).toFixed(2);
 
@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         // Update card content
         currentCard.querySelector(".card-title").textContent = cardTitle;
-        currentCard.querySelector(".provider-name").textContent = selectedProvider !== "0" ? selectedProvider : "None";
+        currentCard.querySelector(".provider-name").textContent = selectedProvider !== "0.00" ? selectedProvider : "No provider";
         currentCard.querySelector(".card-text").textContent = `Number: ${cardNumber}`;
         currentCard.querySelector(".card-cost").textContent = `Total Cost: $${totalCost}`;
 

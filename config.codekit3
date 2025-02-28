@@ -383,6 +383,19 @@
       "oS" : 1,
       "pg" : 0
     },
+    "\/assets\/scss\/layout\/_compare.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/css\/_compare.css",
+      "oF" : 0,
+      "oS" : 1,
+      "pg" : 0
+    },
     "\/assets\/scss\/layout\/_footer.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -541,14 +554,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/page-drag-v2.php",
-      "oF" : 0
-    },
-    "\/page-drag-v3.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/page-drag-v3.php",
       "oF" : 0
     },
     "\/page-home copy.php" : {

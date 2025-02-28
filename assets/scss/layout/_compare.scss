@@ -1,0 +1,31 @@
+.atmTotal {
+	display: block;
+	text-transform: uppercase;
+	font-size: 0.7rem;
+	letter-spacing: 0.1em;
+}
+
+.atmTotalCost {
+	display: block;
+	font-size: 2.4rem;
+}
+
+.btn-primary {
+	transition: 0.3s;
+	background-color: $color--primary;
+	border: none;
+	&:hover {
+		background-color: $color--secondary;
+	}
+}
+
+// Card
+.card-title {
+	font-weight: bold;
+}
+
+.card-provider {}
+
+.card-text {}
+
+.card-cost {}

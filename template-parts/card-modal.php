@@ -11,5 +11,5 @@
     <p class="card-provider">Provider: <span class="provider-name">None</span></p>
     <p class="card-text">Number: <?php echo $card_number; ?></p>
     <p class="card-cost">Total Cost: $0</p>
-    <button class="btn btn-primary btn-edit-card" data-card-id="<?php echo $card_id; ?>" data-row="<?php echo $row_id; ?>">Edit</button>
+    <button class="btn btn-primary btn-edit-card btn-sm" data-card-id="<?php echo $card_id; ?>" data-row="<?php echo $row_id; ?>">Update</button>
 </div>

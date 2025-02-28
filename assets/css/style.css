@@ -65,7 +65,7 @@ html {
 }
 
 body {
-  color: #002528;
+  color: #2E3E41;
   font-family: "AvertaStdPE-Regular", Arial, Helvetica, sans-serif;
   font-size: 1em; /* currently ems because Chrome bug misinterpreting rems on body element */
 }
@@ -87,7 +87,7 @@ a {
   }
 }
 h2 {
-  color: #002528;
+  color: #2E3E41;
   font-size: 2rem;
 }
 
@@ -145,7 +145,7 @@ a[class*=atm--button-]:hover {
 
 button.atm--button-primary {
   color: #fff;
-  background-color: #002528;
+  background-color: #2E3E41;
 }
 button.atm--button-primary:hover {
   color: #fff;
@@ -190,14 +190,14 @@ label {
 }
 
 table.mol--table {
-  color: #002528;
+  color: #2E3E41;
 }
 table.mol--table tr {
   opacity: 0.6;
 }
 table.mol--table tr:hover {
   transition: 0.3s;
-  background-color: rgba(0, 37, 40, 0.05);
+  background-color: rgba(46, 62, 65, 0.05);
 }
 table.mol--table tr.atm--qualified {
   opacity: 1;
@@ -209,12 +209,12 @@ table.mol--table tr td.atm--name, table.mol--table tr td.atm--points {
   font-family: "AvertaStdPE-Semibold", Arial, Helvetica, sans-serif;
 }
 table.mol--table thead {
-  color: #002528;
-  background-color: rgba(0, 37, 40, 0.1);
+  color: #2E3E41;
+  background-color: rgba(46, 62, 65, 0.1);
 }
 table.mol--table thead tr {
   opacity: 1;
-  color: #002528;
+  color: #2E3E41;
 }
 table.mol--table thead tr th {
   font-family: "AvertaStdPE-Bold", Arial, Helvetica, sans-serif;
@@ -226,7 +226,7 @@ table.mol--table thead tr th {
 }
 
 header {
-  background-color: #002528;
+  background-color: #2e3e41;
 }
 
 nav a {
@@ -397,8 +397,33 @@ nav a:disabled, nav .nav-link:disabled {
   font-size: 1.4rem;
 }
 
+.atmTotal {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+}
+
+.atmTotalCost {
+  display: block;
+  font-size: 2.4rem;
+}
+
+.btn-primary {
+  transition: 0.3s;
+  background-color: #2E3E41;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #00D1D1;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
 footer {
-  background-color: rgba(0, 37, 40, 0.9);
+  background-color: #2E3E41;
   padding: 2rem 0;
 }
 footer i {

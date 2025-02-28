@@ -12,7 +12,7 @@ get_header(); ?>
             <div class="col-12">
                 <div style="padding: 30px 0">
                     <h3>This version is the correct flow from Airtable -> Backend (Node) to Frontend.</h3>
-                    <h4>Locally, remember to spin up app.js (backend) to pull in prices.</h4>
+                    <p>Locally, remember to spin up app.js (backend) to pull in prices..</p>
                     <!-- 
                         1. Origin column?
                         2. Implement a sample design
@@ -23,7 +23,7 @@ get_header(); ?>
 
             <div class="col-3">
                 <section class="mol--columns">
-                    <h3>Status quo (cloud costs)</h3>
+                    <h3>Current Cloud Costs</h3>
                 </section>
             </div>
 
@@ -58,7 +58,7 @@ get_header(); ?>
                                 get_template_part('template-parts/card-modal', null, [
                                     'card_id' => 2, 
                                     'card_title' => 'Decentralized Storage', 
-                                    'card_number' => '15', 
+                                    'card_number' => '10', 
                                     'card_type' => 'Cloud'
                                 ]); 
                             ?>
@@ -74,7 +74,7 @@ get_header(); ?>
                                 get_template_part('template-parts/card-modal', null, [
                                     'card_id' => 3, 
                                     'card_title' => 'On-Prem Storage', 
-                                    'card_number' => '20', 
+                                    'card_number' => '10', 
                                     'card_type' => 'Cloud'
                                 ]); 
                             ?>
@@ -86,13 +86,13 @@ get_header(); ?>
                     <!-- Total Calculation Row -->
                     <div class="row justify-content-center total-cost-row">
                         <div class="col" data-column="1">
-                            <h4>Total Cloud Cost: <span id="total-cloud-cost">$0</span></h4>
+                            <span class="atmTotal">Total Cloud Cost</span><span class="atmTotalCost" id="total-cloud-cost">$0.00</span>
                         </div>
                         <div class="col" data-column="2">
-                            <h4>Total Decentralized Cost: <span id="total-decentralized-cost">$0</span></h4>
+                            <span class="atmTotal">Total Decentralized Cost</span><span class="atmTotalCost" id="total-decentralized-cost">$0.00</span>
                         </div>
                         <div class="col" data-column="3">
-                            <h4>Total On-Prem Cost: <span id="total-onprem-cost">$0</span></h4>
+                            <span class="atmTotal">Total On-Prem Cost</span><span class="atmTotalCost" id="total-onprem-cost">$0.00</span>
                         </div>
                     </div>
                 </section>
@@ -125,7 +125,7 @@ get_header(); ?>
                         <label for="cardNumber" class="form-label">Number of TBs</label>
                         <input type="number" class="form-control" id="cardNumber" min="0">
                     </div>
-                    <p id="calculatedCost">Total Cost: $0</p>
+                    <p id="calculatedCost">Total Cost: $0.00</p>
                 </form>
             </div>
             <div class="modal-footer">
