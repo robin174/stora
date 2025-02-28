@@ -519,6 +519,14 @@
       "oAP" : "\/index.php",
       "oF" : 0
     },
+    "\/page-compare-storage.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/page-compare-storage.php",
+      "oF" : 0
+    },
     "\/page-drag-v1.php" : {
       "cB" : 0,
       "ft" : 8192,

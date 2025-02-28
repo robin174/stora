@@ -65,7 +65,7 @@ html {
 }
 
 body {
-  color: #000A2B;
+  color: #002528;
   font-family: "AvertaStdPE-Regular", Arial, Helvetica, sans-serif;
   font-size: 1em; /* currently ems because Chrome bug misinterpreting rems on body element */
 }
@@ -87,7 +87,7 @@ a {
   }
 }
 h2 {
-  color: #000A2B;
+  color: #002528;
   font-size: 2rem;
 }
 
@@ -125,14 +125,14 @@ footer blockquote cite {
   margin-top: 10px;
   font-size: 1.4rem;
   line-height: 1.5;
-  color: #df0914;
+  color: #00D1D1;
 }
 footer blockquote cite span.context {
   margin-top: 5px;
   display: block;
   font-size: 0.9rem;
   line-height: 1.2;
-  color: #df0914;
+  color: #00D1D1;
 }
 
 a[class*=atm--button-] {
@@ -145,7 +145,7 @@ a[class*=atm--button-]:hover {
 
 button.atm--button-primary {
   color: #fff;
-  background-color: #000A2B;
+  background-color: #002528;
 }
 button.atm--button-primary:hover {
   color: #fff;
@@ -190,14 +190,14 @@ label {
 }
 
 table.mol--table {
-  color: #000A2B;
+  color: #002528;
 }
 table.mol--table tr {
   opacity: 0.6;
 }
 table.mol--table tr:hover {
   transition: 0.3s;
-  background-color: rgba(0, 10, 43, 0.05);
+  background-color: rgba(0, 37, 40, 0.05);
 }
 table.mol--table tr.atm--qualified {
   opacity: 1;
@@ -209,12 +209,12 @@ table.mol--table tr td.atm--name, table.mol--table tr td.atm--points {
   font-family: "AvertaStdPE-Semibold", Arial, Helvetica, sans-serif;
 }
 table.mol--table thead {
-  color: #000A2B;
-  background-color: rgba(0, 10, 43, 0.1);
+  color: #002528;
+  background-color: rgba(0, 37, 40, 0.1);
 }
 table.mol--table thead tr {
   opacity: 1;
-  color: #000A2B;
+  color: #002528;
 }
 table.mol--table thead tr th {
   font-family: "AvertaStdPE-Bold", Arial, Helvetica, sans-serif;
@@ -226,7 +226,7 @@ table.mol--table thead tr th {
 }
 
 header {
-  background-color: #000a2b;
+  background-color: #002528;
 }
 
 nav a {
@@ -242,7 +242,7 @@ nav a:visited {
   color: #fff;
 }
 nav a:hover {
-  color: #df0914;
+  color: #00D1D1;
 }
 nav a:active {
   color: #fff;
@@ -264,7 +264,7 @@ nav h1, nav h1 a.navbar-brand {
   margin-bottom: 0;
 }
 nav h1 a.navbar-brand:hover {
-  color: #df0914;
+  color: #00D1D1;
 }
 nav a, nav .nav-link {
   text-transform: uppercase;
@@ -279,7 +279,7 @@ nav a:visited, nav .nav-link:visited {
   color: #fff;
 }
 nav a:hover, nav .nav-link:hover {
-  color: #df0914;
+  color: #00D1D1;
 }
 nav a:active, nav .nav-link:active {
   color: #fff;
@@ -325,14 +325,14 @@ nav a:disabled, nav .nav-link:disabled {
   }
   .offcanvas.offcanvas-end li.menu-item:hover {
     background-color: rgba(0, 0, 0, 0.5);
-    border-left: 7px solid #df0914;
+    border-left: 7px solid #00D1D1;
   }
   .offcanvas.offcanvas-end li.current-menu-item, .offcanvas.offcanvas-end li.current-menu-item:hover {
     background-color: rgb(0, 0, 0);
-    border-left: 7px solid #df0914;
+    border-left: 7px solid #00D1D1;
   }
   .offcanvas.offcanvas-end li.current-menu-item:hover, .offcanvas.offcanvas-end li.current-menu-item:hover:hover {
-    color: #df0914;
+    color: #00D1D1;
   }
   .offcanvas.offcanvas-end .offcanvas-header button.btn-close {
     background: unset;
@@ -352,7 +352,7 @@ nav a:disabled, nav .nav-link:disabled {
     background-color: unset;
   }
   .offcanvas.offcanvas-end li.current-menu-item a, .offcanvas.offcanvas-end li.current-menu-item:hover a {
-    color: #df0914;
+    color: #00D1D1;
   }
 }
 .templ--page-main {
@@ -398,7 +398,7 @@ nav a:disabled, nav .nav-link:disabled {
 }
 
 footer {
-  background-color: rgba(0, 10, 43, 0.9);
+  background-color: rgba(0, 37, 40, 0.9);
   padding: 2rem 0;
 }
 footer i {
@@ -413,19 +413,19 @@ footer i.inactive {
   color: rgba(255, 255, 255, 0.3);
 }
 footer .highlight {
-  color: #df0914;
+  color: #00D1D1;
 }
 footer a {
   color: #fff;
 }
 footer a:hover {
-  color: #df0914;
+  color: #00D1D1;
 }
 footer a i {
   transition: 0.3s;
 }
 footer a i:hover {
-  color: #df0914;
+  color: #00D1D1;
 }
 
 @media (min-width: 576px) {
@@ -458,7 +458,7 @@ footer a i:hover {
   }
 }
 .mol__unit-contact {
-  border-top: solid 1px #df0914;
+  border-top: solid 1px #00D1D1;
   padding-top: 1rem;
   margin-bottom: 3rem;
   color: white;
@@ -470,7 +470,7 @@ footer a i:hover {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-family: "AvertaStdPE-Bold", Arial, Helvetica, sans-serif;
-  color: #df0914;
+  color: #00D1D1;
   font-size: 0.9rem;
   margin-bottom: 8px;
 }
