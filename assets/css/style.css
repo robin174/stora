@@ -380,21 +380,67 @@ nav a:disabled, nav .nav-link:disabled {
   font-size: 0.8rem;
 }
 
+.templ--page-drag {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
 .templ--page-drag .mol--columns {
   padding: 10px;
-  background: rgba(0, 0, 0, 0.02);
+  background: rgba(0, 0, 0, 0.04);
 }
-.templ--page-drag .col-head {
-  height: 80px;
+
+.cost-comparison {
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
-.templ--page-drag .col {
-  padding: 5px;
-  margin: 5px 0;
-  border: 1px dashed #ccc;
-  position: relative;
+
+.col-foot {
+  padding: 10px;
 }
-.templ--page-drag div[id*=total-column-] {
+.col-foot .col {
+  padding: 10px;
+  background: none;
+  border-top: 3px solid #000;
+}
+
+div[id*=total-column-] {
   font-size: 1.4rem;
+}
+
+.col {
+  background: rgba(255, 0, 0, 0.1);
+  padding: 10px;
+  margin: 5px;
+}
+
+.card {
+  background: rgba(255, 0, 0, 0.1);
+}
+
+.col-head .col {
+  background: none;
+}
+.col-head .col p {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+.col-head h2 {
+  margin-bottom: 5px;
+}
+
+.cloud-costs-column {
+  padding: 0 10px;
+}
+.cloud-costs-column .col {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+.cloud-costs-column .card:hover {
+  cursor: default;
+}
+
+.molTotalCost02, .molTotalCost03 {
+  border-left: 5px solid black;
+  padding-left: 15px;
 }
 
 .atmTotal {

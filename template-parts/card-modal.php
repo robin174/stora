@@ -6,10 +6,17 @@
     $row_id = isset($args['row_id']) ? esc_attr($args['row_id']) : $card_id; // Ensure row ID is set correctly
 ?>
 
-<div class="card" draggable="true" data-type="<?php echo $card_type; ?>" data-card-id="<?php echo $card_id; ?>" data-row="<?php echo $row_id; ?>">
+<div class="card" draggable="true" data-type="<?php echo $card_type; ?>" data-card-id="<?php echo $card_id; ?>">
     <h3 class="card-title"><?php echo $card_title; ?></h3>
-    <p class="card-provider">Provider: <span class="provider-name">None</span></p>
-    <p class="card-text">Number: <?php echo $card_number; ?></p>
+
+    <!-- Show only for Cloud & Decentralized -->
+    <?php if ($card_type !== 'On Prem') : ?>
+        <p class="card-provider">Provider: None</p>
+        <p class="card-text">Number: <?php echo $card_number; ?> TB</p>
+    <?php else: ?>
+        <p class="card-text">Number of Servers: 0</p>
+    <?php endif; ?>
+
     <p class="card-cost">Total Cost: $0</p>
-    <button class="btn btn-primary btn-edit-card btn-sm" data-card-id="<?php echo $card_id; ?>" data-row="<?php echo $row_id; ?>">Update</button>
+    <button class="btn btn-primary btn-edit-card" data-card-id="<?php echo $card_id; ?>">Edit</button>
 </div>

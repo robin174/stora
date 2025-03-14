@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Page - Compare Storage
+* Template Name: Page - Compare Storage Original
 * @package stora
 */
 
@@ -11,80 +11,66 @@ get_header(); ?>
         <div class="row">
             <div class="col-12">
                 <div style="padding: 30px 0">
-                    <h3>Welcome to Stora Compare.</h3>
-                    <p>Input your current and future costs to determine the potential stroage savings.</p>
+                    <h3>This version is the correct flow from Airtable -> Backend (Node) to Frontend.</h3>
+                    <p>Locally, remember to spin up app.js (backend) to pull in prices..</p>
+                    <!-- 
+                        1. Origin column?
+                        2. Implement a sample design
+                        3. Loading aspect to the data coming in... issue on live
+                    -->
                 </div>
             </div>
 
             <!-- Current Cloud Costs Column -->
             <div class="col-3">
                 <section class="mol--columns">
-
-                    <div class="row col-head">
-                        <div class="col">
-                            <h2>Cloud</h2>
-                            <p>Input your current cloud costs.</p>
-                        </div>
-                    </div>
-                    <div class="cloud-costs-column">
-                        <div id="cloud-costs-container">
-
-                            <!-- Cloud cost cards -->
-                            <?php for ($i = 1; $i <= 3; $i++) : ?>
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="card" data-type="Cloud" data-card-id="cloud-<?php echo $i; ?>">
-                                            <h3 class="card-title">Current Storage 0<?php echo $i; ?></h3>
-                                            <p class="card-provider">Provider: None</p>
-                                            <p class="card-text">Amount: 10</p>
-                                            <p class="card-cost">Total Cost: $0.00</p>
-                                            <button class="btn btn-primary btn-edit-card" data-card-id="cloud-<?php echo $i; ?>">Edit</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php endfor; ?>
-
-                        </div>
-                    </div>
-                     <div class="row col-foot">
-                        <!-- Total Cost Calculation for Current Cloud Costs -->
-                        <div class="col">
-                            <div class="total-costs">
-                                <span class="atmTotal">Total Current Cloud Cost</span>
-                                <span class="atmTotalCost" id="total-current-cloud-cost">$0.00</span>
-                            </div>
+                    <div class="row justify-content-center col-head">
+                        <div class="col"><h2>Cloud</h2>
+                        <p>Input your current cloud costs</p>
                         </div>
                     </div>
                 
+                    <div class="cloud-costs-column">
+                        <div id="cloud-costs-container">
+                            <div class="col">
+                                <!-- Cloud cost cards -->
+                                <?php for ($i = 1; $i <= 3; $i++) : ?>
+                                    <div class="card" data-type="Cloud" data-card-id="cloud-<?php echo $i; ?>">
+                                        <h3 class="card-title">Cloud Cost <?php echo $i; ?></h3>
+                                        <p class="card-provider">Provider: None</p>
+                                        <p class="card-text">Number: 0</p>
+                                        <p class="card-cost">Total Cost: $0.00</p>
+                                        <button class="btn btn-primary btn-edit-card" data-card-id="cloud-<?php echo $i; ?>">Edit</button>
+                                    </div>
+                                <?php endfor; ?>
+                            </div>
+                        </div>
+
+                        <!-- Total Cost Calculation for Current Cloud Costs -->
+                        <div class="total-costs">
+                            <span class="atmTotal">Total Current Cloud Cost</span>
+                            <span class="atmTotalCost" id="total-current-cloud-cost">$0.00</span>
+                        </div>
+                    </div>
                 </section>
             </div>
 
             <!-- Main Drag-and-Drop Section -->
-            <div class="col-9 orgDrag">
+            <div class="col-9">
                 <section class="mol--columns">
-
-                    <div class="row col-head">
-                        <div class="col" data-column="1">
-                            <h2>Cloud</h2>
-                            <p>Establish future costs.</p>
-                        </div>
-                        <div class="col" data-column="2">
-                            <h2>Decentralized</h2>
-                            <p>Establish future costs.</p>
-                        </div>
-                        <div class="col" data-column="3">
-                            <h2>On-Prem</h2>
-                            <p>Establish future costs.</p>
-                        </div>
+                    <div class="row justify-content-center col-head">
+                        <div class="col" data-column="1"><h2>Cloud</h2></div>
+                        <div class="col" data-column="2"><h2>Decentralized</h2></div>
+                        <div class="col" data-column="3"><h2>On-Prem</h2></div>
                     </div>
 
                     <!-- Row 1 -->
-                    <div class="row" data-row="1">
+                    <div class="row justify-content-center" data-row="1">
                         <div class="col" data-column="1">
                             <?php 
                                 get_template_part('template-parts/card-modal', null, [
                                     'card_id' => 1, 
-                                    'card_title' => 'Future Storage 01', 
+                                    'card_title' => 'Storage Card 01', 
                                     'card_number' => '10', 
                                     'card_type' => 'Cloud'
                                 ]); 
@@ -95,12 +81,12 @@ get_header(); ?>
                     </div>
 
                     <!-- Row 2 -->
-                    <div class="row" data-row="2">
+                    <div class="row justify-content-center" data-row="2">
                         <div class="col" data-column="1">
                             <?php 
                                 get_template_part('template-parts/card-modal', null, [
                                     'card_id' => 2, 
-                                    'card_title' => 'Future Storage 02', 
+                                    'card_title' => 'Storage Card 02', 
                                     'card_number' => '10', 
                                     'card_type' => 'Cloud'
                                 ]); 
@@ -111,12 +97,12 @@ get_header(); ?>
                     </div>
 
                     <!-- Row 3 -->
-                    <div class="row" data-row="3">
+                    <div class="row justify-content-center" data-row="3">
                         <div class="col" data-column="1">
                             <?php 
                                 get_template_part('template-parts/card-modal', null, [
                                     'card_id' => 3, 
-                                    'card_title' => 'Future Storage 03', 
+                                    'card_title' => 'Storage Card 03', 
                                     'card_number' => '10', 
                                     'card_type' => 'Cloud'
                                 ]); 
@@ -127,7 +113,7 @@ get_header(); ?>
                     </div>
 
                     <!-- Total Calculation Row -->
-                    <div class="row col-foot total-cost-row">
+                    <div class="row justify-content-center total-cost-row">
                         <div class="col" data-column="1">
                             <span class="atmTotal">Total Cloud Cost</span><span class="atmTotalCost" id="total-cloud-cost">$0.00</span>
                         </div>
@@ -148,33 +134,17 @@ get_header(); ?>
 <section class="cost-comparison">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-3 molTotalCost01 d-flex flex-column align-items-start justify-content-center">
-                <!-- 
+            <div class="col-4 text-center">
                 <h3>Total Current Cloud Cost</h3>
                 <p class="cost-value" id="total-current-cloud-cost">$0.00</p>
-                -->
             </div>
-            <div class="col-6 molTotalCost02 d-flex flex-column align-items-start justify-content-center">
+            <div class="col-4 text-center">
                 <h3>Total Cloud + Decentralized + On-Prem Cost</h3>
                 <p class="cost-value" id="total-new-cost">$0.00</p>
             </div>
-            <div class="col-3 molTotalCost03 d-flex flex-column align-items-start justify-content-center">
+            <div class="col-4 text-center">
                 <h3>Cost Difference</h3>
                 <p class="cost-value" id="cost-difference">$0.00</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div style="padding: 30px 0; font-size: 0.8rem;">
-                    <h6>Version 0.3.1</h6>
-                    <span class="d-block">This version is the correct flow from Airtable -> Backend (Node) to Frontend.</span>
-                    <span class="d-block">Locally, remember to spin up app.js (backend) to pull in prices..</span>
-                </div>
             </div>
         </div>
     </div>
