@@ -113,11 +113,12 @@ document.addEventListener("DOMContentLoaded", async function () {
         button.addEventListener("click", function () {
             console.log("Opening modal...");
             currentCard = this.closest(".card");
-            const cardTitle = currentCard.querySelector(".card-title").textContent;
-            const cardType = currentCard.dataset.type;
 
-            // Set existing title
+             // Populate the title field
+            const cardTitle = currentCard.querySelector(".card-title").textContent;
             document.getElementById("cardTitle").value = cardTitle;
+
+            const cardType = currentCard.dataset.type;
 
             if (cardType === "On Prem") {
                 document.querySelectorAll(".onprem-fields").forEach(field => field.style.display = "block");
@@ -206,6 +207,9 @@ document.addEventListener("DOMContentLoaded", async function () {
         const cardTitle = document.getElementById("cardTitle").value;
         let totalCost = parseFloat(document.getElementById("calculatedCost").textContent.replace("Total Cost: $", "")) || 0;
 
+        // Update the card title
+        currentCard.querySelector(".card-title").textContent = cardTitle;
+
         if (currentCard.dataset.type === "On Prem") {
             const costPerServer = parseFloat(document.getElementById("costPerServer").value) || 0;
             const numberOfServers = parseInt(document.getElementById("numberOfServers").value, 10) || 0;
@@ -225,7 +229,6 @@ document.addEventListener("DOMContentLoaded", async function () {
             currentCard.querySelector(".card-provider").textContent = `Provider: ${selectedProvider}`;
         }
 
-        currentCard.querySelector(".card-title").textContent = cardTitle;
         currentCard.querySelector(".card-cost").textContent = `Total Cost: $${totalCost.toFixed(2)}`;
 
         updateTotalCosts();

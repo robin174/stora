@@ -195,6 +195,10 @@ get_header(); ?>
             <div class="modal-body">
                 <form id="cardForm">
                     <!-- Fields shown for Cloud & Decentralized storage -->
+                    <div class="mb-3">
+                        <label for="cardTitle" class="form-label">Card Title</label>
+                        <input type="text" class="form-control" id="cardTitle">
+                    </div>
                     <div class="mb-3 storage-fields">
                         <label for="cardProvider" class="form-label">Provider</label>
                         <select class="form-select" id="cardProvider">
