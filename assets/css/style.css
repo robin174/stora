@@ -65,7 +65,7 @@ html {
 }
 
 body {
-  color: #2E3E41;
+  color: #001128;
   font-family: "AvertaStdPE-Regular", Arial, Helvetica, sans-serif;
   font-size: 1em; /* currently ems because Chrome bug misinterpreting rems on body element */
 }
@@ -87,7 +87,7 @@ a {
   }
 }
 h2 {
-  color: #2E3E41;
+  color: #001128;
   font-size: 2rem;
 }
 
@@ -125,14 +125,14 @@ footer blockquote cite {
   margin-top: 10px;
   font-size: 1.4rem;
   line-height: 1.5;
-  color: #00D1D1;
+  color: #20F1C9;
 }
 footer blockquote cite span.context {
   margin-top: 5px;
   display: block;
   font-size: 0.9rem;
   line-height: 1.2;
-  color: #00D1D1;
+  color: #20F1C9;
 }
 
 a[class*=atm--button-] {
@@ -145,7 +145,7 @@ a[class*=atm--button-]:hover {
 
 button.atm--button-primary {
   color: #fff;
-  background-color: #2E3E41;
+  background-color: #001128;
 }
 button.atm--button-primary:hover {
   color: #fff;
@@ -184,20 +184,23 @@ label {
   margin: 0.5rem 0;
 }
 
+.modal .modal-header {
+  background-color: #001128;
+  color: #20F1C9;
+}
 .modal .modal-body .form-label {
   font-weight: bold;
   font-size: 0.9rem;
 }
-
 table.mol--table {
-  color: #2E3E41;
+  color: #001128;
 }
 table.mol--table tr {
   opacity: 0.6;
 }
 table.mol--table tr:hover {
   transition: 0.3s;
-  background-color: rgba(46, 62, 65, 0.05);
+  background-color: rgba(0, 17, 40, 0.05);
 }
 table.mol--table tr.atm--qualified {
   opacity: 1;
@@ -209,12 +212,12 @@ table.mol--table tr td.atm--name, table.mol--table tr td.atm--points {
   font-family: "AvertaStdPE-Semibold", Arial, Helvetica, sans-serif;
 }
 table.mol--table thead {
-  color: #2E3E41;
-  background-color: rgba(46, 62, 65, 0.1);
+  color: #001128;
+  background-color: rgba(0, 17, 40, 0.1);
 }
 table.mol--table thead tr {
   opacity: 1;
-  color: #2E3E41;
+  color: #001128;
 }
 table.mol--table thead tr th {
   font-family: "AvertaStdPE-Bold", Arial, Helvetica, sans-serif;
@@ -226,7 +229,7 @@ table.mol--table thead tr th {
 }
 
 header {
-  background-color: #2e3e41;
+  background-color: #001128;
 }
 
 nav a {
@@ -242,7 +245,7 @@ nav a:visited {
   color: #fff;
 }
 nav a:hover {
-  color: #00D1D1;
+  color: #20F1C9;
 }
 nav a:active {
   color: #fff;
@@ -264,7 +267,7 @@ nav h1, nav h1 a.navbar-brand {
   margin-bottom: 0;
 }
 nav h1 a.navbar-brand:hover {
-  color: #00D1D1;
+  color: #20F1C9;
 }
 nav a, nav .nav-link {
   text-transform: uppercase;
@@ -279,7 +282,7 @@ nav a:visited, nav .nav-link:visited {
   color: #fff;
 }
 nav a:hover, nav .nav-link:hover {
-  color: #00D1D1;
+  color: #20F1C9;
 }
 nav a:active, nav .nav-link:active {
   color: #fff;
@@ -325,14 +328,14 @@ nav a:disabled, nav .nav-link:disabled {
   }
   .offcanvas.offcanvas-end li.menu-item:hover {
     background-color: rgba(0, 0, 0, 0.5);
-    border-left: 7px solid #00D1D1;
+    border-left: 7px solid #20F1C9;
   }
   .offcanvas.offcanvas-end li.current-menu-item, .offcanvas.offcanvas-end li.current-menu-item:hover {
     background-color: rgb(0, 0, 0);
-    border-left: 7px solid #00D1D1;
+    border-left: 7px solid #20F1C9;
   }
   .offcanvas.offcanvas-end li.current-menu-item:hover, .offcanvas.offcanvas-end li.current-menu-item:hover:hover {
-    color: #00D1D1;
+    color: #20F1C9;
   }
   .offcanvas.offcanvas-end .offcanvas-header button.btn-close {
     background: unset;
@@ -352,7 +355,7 @@ nav a:disabled, nav .nav-link:disabled {
     background-color: unset;
   }
   .offcanvas.offcanvas-end li.current-menu-item a, .offcanvas.offcanvas-end li.current-menu-item:hover a {
-    color: #00D1D1;
+    color: #20F1C9;
   }
 }
 .templ--page-main {
@@ -384,14 +387,48 @@ nav a:disabled, nav .nav-link:disabled {
   margin-top: 20px;
   margin-bottom: 40px;
 }
-.templ--page-drag .mol--columns {
+.templ--page-drag .mol--artboard {
   padding: 10px;
   background: rgba(0, 0, 0, 0.04);
+}
+.templ--page-drag .mol--artboard .cloud-costs-column {
+  padding: 0 10px;
+}
+.templ--page-drag .mol--artboard .cloud-costs-column .col {
+  background-color: rgba(0, 0, 0, 0.03);
+  padding: 10px;
+  margin: 5px;
+}
+.templ--page-drag .mol--artboard .cloud-costs-column .card:hover {
+  cursor: default;
+}
+.templ--page-drag .mol--artboard .comparison-costs-column {
+  padding: 0 10px;
+}
+.templ--page-drag .mol--artboard .comparison-costs-column .col {
+  background: rgba(0, 17, 40, 0.05);
+  padding: 10px;
+  margin: 5px;
 }
 
 .cost-comparison {
   margin-top: 20px;
   margin-bottom: 40px;
+}
+
+.col-head {
+  padding: 10px;
+}
+.col-head .col {
+  background: none;
+}
+.col-head .col p {
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+.col-head h2 {
+  margin-bottom: 5px;
 }
 
 .col-foot {
@@ -407,35 +444,8 @@ div[id*=total-column-] {
   font-size: 1.4rem;
 }
 
-.col {
-  background: rgba(255, 0, 0, 0.1);
-  padding: 10px;
-  margin: 5px;
-}
-
 .card {
-  background: rgba(255, 0, 0, 0.1);
-}
-
-.col-head .col {
-  background: none;
-}
-.col-head .col p {
-  font-size: 0.9rem;
-  font-style: italic;
-}
-.col-head h2 {
-  margin-bottom: 5px;
-}
-
-.cloud-costs-column {
-  padding: 0 10px;
-}
-.cloud-costs-column .col {
-  background-color: rgba(0, 0, 0, 0.03);
-}
-.cloud-costs-column .card:hover {
-  cursor: default;
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .molTotalCost02, .molTotalCost03 {
@@ -457,19 +467,35 @@ div[id*=total-column-] {
 
 .btn-primary {
   transition: 0.3s;
-  background-color: #2E3E41;
+  background-color: #001128;
   border: none;
 }
 .btn-primary:hover {
-  background-color: #00D1D1;
+  background-color: #20F1C9;
 }
 
 .card-title {
   font-weight: bold;
 }
 
+.card-provider, .card-text {
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+}
+
+b {
+  font-weight: bold;
+}
+
+.card-cost {
+  text-align: right;
+  border-top: 1px solid black;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
 footer {
-  background-color: #2E3E41;
+  background-color: #001128;
   padding: 2rem 0;
 }
 footer i {
@@ -484,19 +510,19 @@ footer i.inactive {
   color: rgba(255, 255, 255, 0.3);
 }
 footer .highlight {
-  color: #00D1D1;
+  color: #20F1C9;
 }
 footer a {
   color: #fff;
 }
 footer a:hover {
-  color: #00D1D1;
+  color: #20F1C9;
 }
 footer a i {
   transition: 0.3s;
 }
 footer a i:hover {
-  color: #00D1D1;
+  color: #20F1C9;
 }
 
 @media (min-width: 576px) {
@@ -529,7 +555,7 @@ footer a i:hover {
   }
 }
 .mol__unit-contact {
-  border-top: solid 1px #00D1D1;
+  border-top: solid 1px #20F1C9;
   padding-top: 1rem;
   margin-bottom: 3rem;
   color: white;
@@ -541,7 +567,7 @@ footer a i:hover {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-family: "AvertaStdPE-Bold", Arial, Helvetica, sans-serif;
-  color: #00D1D1;
+  color: #20F1C9;
   font-size: 0.9rem;
   margin-bottom: 8px;
 }

@@ -1,4 +1,3 @@
-// Test
 console.log("API URL being used:", wpData.api_url);
 
 document.addEventListener("DOMContentLoaded", async function () {
@@ -36,15 +35,25 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
     });
 
-    // Enable Drop Areas (Columns within the same row)
+    // Enable Drop Areas (Only within the same row)
     document.querySelectorAll(".row[data-row] .col[data-column]").forEach(column => {
         column.addEventListener("dragover", event => event.preventDefault());
+        
         column.addEventListener("drop", function (event) {
             event.preventDefault();
             const cardId = event.dataTransfer.getData("text/plain");
             const card = document.querySelector(`[data-card-id="${cardId}"]`);
-
             if (!card) return;
+
+            // Ensure the card is being dropped in the same row
+            const sourceRow = card.closest(".row[data-row]");
+            const targetRow = column.closest(".row[data-row]");
+            
+            if (sourceRow !== targetRow) {
+                console.log("Cards can only be moved left/right within the same row.");
+                return; // Prevent dropping in a different row
+            }
+
             column.appendChild(card);
             updateCardType(card, column.dataset.column);
             updateTotalCosts();
@@ -65,7 +74,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
     }
 
-    // **Update Total Costs**
+    // Update Total Costs
     function updateTotalCosts() {
         let cloudTotal = 0, decentralizedTotal = 0, onPremTotal = 0, currentCloudTotal = 0;
 

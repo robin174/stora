@@ -1,8 +1,15 @@
 .modal {
+	& .modal-header {
+		background-color: $color--primary;
+		color: $color--secondary;
+	}
 	& .modal-body {
 		 & .form-label {
 		 	font-weight: bold;
 			font-size: 0.9rem;
 		}
+	}
+	& .modal-footer {
+
 	}
 }

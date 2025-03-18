@@ -11,12 +11,12 @@
 
     <!-- Show only for Cloud & Decentralized -->
     <?php if ($card_type !== 'On Prem') : ?>
-        <p class="card-provider">Provider: None</p>
-        <p class="card-text">Number: <?php echo $card_number; ?> TB</p>
+        <span class="card-provider">Provider: None</span>
+        <span class="card-text">Number: <?php echo $card_number; ?> TB</span>
     <?php else: ?>
-        <p class="card-text">Number of Servers: 0</p>
+        <span class="card-text">Number of Servers: 0</span>
     <?php endif; ?>
 
-    <p class="card-cost">Total Cost: $0</p>
-    <button class="btn btn-primary btn-edit-card" data-card-id="<?php echo $card_id; ?>">Edit</button>
+    <span class="card-cost">Total Cost: $0.00</span>
+    <button class="btn btn-primary btn-sm btn-edit-card" data-card-id="<?php echo $card_id; ?>">Edit</button>
 </div>

@@ -18,7 +18,7 @@ get_header(); ?>
 
             <!-- Current Cloud Costs Column -->
             <div class="col-3">
-                <section class="mol--columns">
+                <section class="mol--artboard">
 
                     <div class="row col-head">
                         <div class="col">
@@ -26,6 +26,7 @@ get_header(); ?>
                             <p>Input your current cloud costs.</p>
                         </div>
                     </div>
+
                     <div class="cloud-costs-column">
                         <div id="cloud-costs-container">
 
@@ -35,10 +36,10 @@ get_header(); ?>
                                     <div class="col">
                                         <div class="card" data-type="Cloud" data-card-id="cloud-<?php echo $i; ?>">
                                             <h3 class="card-title">Current Storage 0<?php echo $i; ?></h3>
-                                            <p class="card-provider">Provider: None</p>
-                                            <p class="card-text">Amount: 10</p>
-                                            <p class="card-cost">Total Cost: $0.00</p>
-                                            <button class="btn btn-primary btn-edit-card" data-card-id="cloud-<?php echo $i; ?>">Edit</button>
+                                            <span class="card-provider">Provider: <b>None</b></span>
+                                            <span class="card-text">TB: 0</span>
+                                            <span class="card-cost">Total Cost: $0.00</span>
+                                            <button class="btn btn-primary btn-sm btn-edit-card" data-card-id="cloud-<?php echo $i; ?>">Edit</button>
                                         </div>
                                     </div>
                                 </div>
@@ -46,7 +47,8 @@ get_header(); ?>
 
                         </div>
                     </div>
-                     <div class="row col-foot">
+
+                    <div class="row col-foot">
                         <!-- Total Cost Calculation for Current Cloud Costs -->
                         <div class="col">
                             <div class="total-costs">
@@ -61,7 +63,7 @@ get_header(); ?>
 
             <!-- Main Drag-and-Drop Section -->
             <div class="col-9 orgDrag">
-                <section class="mol--columns">
+                <section class="mol--artboard">
 
                     <div class="row col-head">
                         <div class="col" data-column="1">
@@ -78,52 +80,54 @@ get_header(); ?>
                         </div>
                     </div>
 
-                    <!-- Row 1 -->
-                    <div class="row" data-row="1">
-                        <div class="col" data-column="1">
-                            <?php 
-                                get_template_part('template-parts/card-modal', null, [
-                                    'card_id' => 1, 
-                                    'card_title' => 'Future Storage 01', 
-                                    'card_number' => '10', 
-                                    'card_type' => 'Cloud'
-                                ]); 
-                            ?>
+                    <div class="comparison-costs-column">
+                        <!-- Row 1 -->
+                        <div class="row" data-row="1">
+                            <div class="col" data-column="1">
+                                <?php 
+                                    get_template_part('template-parts/card-modal', null, [
+                                        'card_id' => 1, 
+                                        'card_title' => 'Future Storage 01', 
+                                        'card_number' => '0', 
+                                        'card_type' => 'Cloud'
+                                    ]); 
+                                ?>
+                            </div>
+                            <div class="col" data-column="2"></div>
+                            <div class="col" data-column="3"></div>
                         </div>
-                        <div class="col" data-column="2"></div>
-                        <div class="col" data-column="3"></div>
-                    </div>
 
-                    <!-- Row 2 -->
-                    <div class="row" data-row="2">
-                        <div class="col" data-column="1">
-                            <?php 
-                                get_template_part('template-parts/card-modal', null, [
-                                    'card_id' => 2, 
-                                    'card_title' => 'Future Storage 02', 
-                                    'card_number' => '10', 
-                                    'card_type' => 'Cloud'
-                                ]); 
-                            ?>
+                        <!-- Row 2 -->
+                        <div class="row" data-row="2">
+                            <div class="col" data-column="1">
+                                <?php 
+                                    get_template_part('template-parts/card-modal', null, [
+                                        'card_id' => 2, 
+                                        'card_title' => 'Future Storage 02', 
+                                        'card_number' => '0', 
+                                        'card_type' => 'Cloud'
+                                    ]); 
+                                ?>
+                            </div>
+                            <div class="col" data-column="2"></div>
+                            <div class="col" data-column="3"></div>
                         </div>
-                        <div class="col" data-column="2"></div>
-                        <div class="col" data-column="3"></div>
-                    </div>
 
-                    <!-- Row 3 -->
-                    <div class="row" data-row="3">
-                        <div class="col" data-column="1">
-                            <?php 
-                                get_template_part('template-parts/card-modal', null, [
-                                    'card_id' => 3, 
-                                    'card_title' => 'Future Storage 03', 
-                                    'card_number' => '10', 
-                                    'card_type' => 'Cloud'
-                                ]); 
-                            ?>
+                        <!-- Row 3 -->
+                        <div class="row" data-row="3">
+                            <div class="col" data-column="1">
+                                <?php 
+                                    get_template_part('template-parts/card-modal', null, [
+                                        'card_id' => 3, 
+                                        'card_title' => 'Future Storage 03', 
+                                        'card_number' => '0', 
+                                        'card_type' => 'Cloud'
+                                    ]); 
+                                ?>
+                            </div>
+                            <div class="col" data-column="2"></div>
+                            <div class="col" data-column="3"></div>
                         </div>
-                        <div class="col" data-column="2"></div>
-                        <div class="col" data-column="3"></div>
                     </div>
 
                     <!-- Total Calculation Row -->
