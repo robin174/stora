@@ -175,7 +175,7 @@ get_header(); ?>
         <div class="row">
             <div class="col-12">
                 <div style="padding: 30px 0; font-size: 0.8rem;">
-                    <h6>Version 0.3.1</h6>
+                    <h6>Version 0.3.3</h6>
                     <span class="d-block">This version is the correct flow from Airtable -> Backend (Node) to Frontend.</span>
                     <span class="d-block">Locally, remember to spin up app.js (backend) to pull in prices..</span>
                 </div>

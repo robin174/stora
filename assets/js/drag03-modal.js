@@ -123,9 +123,9 @@ document.addEventListener("DOMContentLoaded", async function () {
                 document.querySelectorAll(".onprem-fields").forEach(field => field.style.display = "block");
                 document.querySelectorAll(".storage-fields").forEach(field => field.style.display = "none");
 
-                // Fetch and retain existing values from card data attributes
-                const costPerServer = parseFloat(currentCard.dataset.costPerServer) || 0;
-                const numberOfServers = parseInt(currentCard.dataset.numberOfServers) || 0;
+                // Retain "Cost per Server" and "Number of Servers"
+                const costPerServer = currentCard.dataset.costPerServer ? parseFloat(currentCard.dataset.costPerServer) : 0;
+                const numberOfServers = currentCard.dataset.numberOfServers ? parseInt(currentCard.dataset.numberOfServers, 10) : 0;
 
                 document.getElementById("costPerServer").value = costPerServer;
                 document.getElementById("numberOfServers").value = numberOfServers;
@@ -173,6 +173,11 @@ document.addEventListener("DOMContentLoaded", async function () {
             const costPerServer = parseFloat(document.getElementById("costPerServer").value) || 0;
             const numberOfServers = parseInt(document.getElementById("numberOfServers").value, 10) || 0;
             calculatedCost = costPerServer * numberOfServers;
+
+            // Live update the card's text content while typing
+            if (currentCard) {
+                currentCard.querySelector(".card-text").textContent = `Number of Servers: ${numberOfServers} @ $${costPerServer}/server`;
+            }
         } else {
             const providerSelect = document.getElementById("cardProvider");
             const selectedOption = providerSelect.options[providerSelect.selectedIndex];
@@ -199,12 +204,28 @@ document.addEventListener("DOMContentLoaded", async function () {
         if (!currentCard) return;
 
         const cardTitle = document.getElementById("cardTitle").value;
-        const providerSelect = document.getElementById("cardProvider");
-        const selectedProvider = providerSelect.value;
         let totalCost = parseFloat(document.getElementById("calculatedCost").textContent.replace("Total Cost: $", "")) || 0;
 
+        if (currentCard.dataset.type === "On Prem") {
+            const costPerServer = parseFloat(document.getElementById("costPerServer").value) || 0;
+            const numberOfServers = parseInt(document.getElementById("numberOfServers").value, 10) || 0;
+
+            // Store values in data attributes
+            currentCard.dataset.costPerServer = costPerServer;
+            currentCard.dataset.numberOfServers = numberOfServers;
+
+            // Update the card text
+            currentCard.querySelector(".card-text").textContent = `Number of Servers: ${numberOfServers} @ $${costPerServer}/server`;
+        } else {
+            const cardNumber = document.getElementById("cardNumber").value;
+            currentCard.dataset.cardNumber = cardNumber;
+            currentCard.querySelector(".card-text").textContent = `Number: ${cardNumber} TB`;
+
+            const selectedProvider = document.getElementById("cardProvider").value;
+            currentCard.querySelector(".card-provider").textContent = `Provider: ${selectedProvider}`;
+        }
+
         currentCard.querySelector(".card-title").textContent = cardTitle;
-        currentCard.querySelector(".card-provider").textContent = `Provider: ${selectedProvider}`;
         currentCard.querySelector(".card-cost").textContent = `Total Cost: $${totalCost.toFixed(2)}`;
 
         updateTotalCosts();
