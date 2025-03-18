@@ -150,20 +150,34 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Populate Providers Dynamically
     function populateProviders(cardType, selectedProvider = null) {
+        console.log("Populating providers for:", cardType);
         const providerSelect = document.getElementById("cardProvider");
-        providerSelect.innerHTML = `<option value="0">- Please select</option>`;
 
+        // Show 'Loading...' while fetching providers
+        providerSelect.innerHTML = `<option disabled selected>Loading...</option>`;
+
+        // Filter relevant providers
         const relevantData = airtableData.filter(item => item.type === cardType);
-        relevantData.forEach(provider => {
-            const option = document.createElement("option");
-            option.value = provider.provider;
-            option.dataset.price = provider.price;
-            option.textContent = `${provider.provider} - $${provider.price} / TB`;
-            if (selectedProvider && provider.provider === selectedProvider) option.selected = true;
-            providerSelect.appendChild(option);
-        });
 
-        updateCalculatedCost();
+        // Clear and populate dropdown once data is ready
+        setTimeout(() => {
+            providerSelect.innerHTML = `<option value="0">- Please select</option>`;
+
+            relevantData.forEach(provider => {
+                const option = document.createElement("option");
+                option.value = provider.provider;
+                option.dataset.price = provider.price;
+                option.textContent = `${provider.provider} - $${provider.price} / TB`;
+
+                if (selectedProvider && provider.provider === selectedProvider) {
+                    option.selected = true;
+                }
+
+                providerSelect.appendChild(option);
+            });
+
+            updateCalculatedCost(); // Recalculate cost after updating
+        }, 1000); // Simulate async loading effect
     }
 
     // Update Cost Calculation
