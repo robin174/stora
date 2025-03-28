@@ -37,7 +37,7 @@ get_header(); ?>
                                         <div class="card" data-type="Cloud" data-card-id="cloud-<?php echo $i; ?>">
                                             <h3 class="card-title">Current Storage 0<?php echo $i; ?></h3>
                                             <span class="card-provider">Provider: <b>None</b></span>
-                                            <span class="card-text">TB: 0</span>
+                                            <span class="card-text">Number: 0 TB</span>
                                             <span class="card-cost">Total Cost: $0.00</span>
                                             <button class="btn btn-primary btn-sm btn-edit-card" data-card-id="cloud-<?php echo $i; ?>">Edit</button>
                                         </div>
@@ -85,7 +85,7 @@ get_header(); ?>
                         <div class="row" data-row="1">
                             <div class="col" data-column="1">
                                 <?php 
-                                    get_template_part('template-parts/card-modal', null, [
+                                    get_template_part('template-parts/card-future', null, [
                                         'card_id' => 1, 
                                         'card_title' => 'Future Storage 01', 
                                         'card_number' => '0', 
@@ -101,7 +101,7 @@ get_header(); ?>
                         <div class="row" data-row="2">
                             <div class="col" data-column="1">
                                 <?php 
-                                    get_template_part('template-parts/card-modal', null, [
+                                    get_template_part('template-parts/card-future', null, [
                                         'card_id' => 2, 
                                         'card_title' => 'Future Storage 02', 
                                         'card_number' => '0', 
@@ -117,7 +117,7 @@ get_header(); ?>
                         <div class="row" data-row="3">
                             <div class="col" data-column="1">
                                 <?php 
-                                    get_template_part('template-parts/card-modal', null, [
+                                    get_template_part('template-parts/card-future', null, [
                                         'card_id' => 3, 
                                         'card_title' => 'Future Storage 03', 
                                         'card_number' => '0', 
@@ -175,7 +175,7 @@ get_header(); ?>
         <div class="row">
             <div class="col-12">
                 <div style="padding: 30px 0; font-size: 0.8rem;">
-                    <h6>Version 0.3.3</h6>
+                    <h6>Version 0.3.4</h6>
                     <span class="d-block">This version is the correct flow from Airtable -> Backend (Node) to Frontend.</span>
                     <span class="d-block">Locally, remember to spin up app.js (backend) to pull in prices..</span>
                 </div>
@@ -195,11 +195,11 @@ get_header(); ?>
             <div class="modal-body">
                 <form id="cardForm">
                     <!-- Fields shown for Cloud & Decentralized storage -->
-                    <div class="mb-3">
+                    <div class="mb-1">
                         <label for="cardTitle" class="form-label">Card Title</label>
                         <input type="text" class="form-control" id="cardTitle">
                     </div>
-                    <div class="mb-3 storage-fields">
+                    <div class="mb-1 storage-fields">
                         <label for="cardProvider" class="form-label">Provider</label>
                         <select class="form-select" id="cardProvider">
                             <option value="0">- Please select</option>
@@ -212,7 +212,7 @@ get_header(); ?>
                     </div>
 
                     <!-- Fields shown only for On-Prem storage -->
-                    <div class="mb-3 onprem-fields" style="display: none;">
+                    <div class="mb-1 onprem-fields" style="display: none;">
                         <label for="costPerServer" class="form-label">Cost per Server (USD)</label>
                         <input type="number" class="form-control" id="costPerServer" min="0">
                     </div>

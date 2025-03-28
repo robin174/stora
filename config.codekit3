@@ -672,28 +672,20 @@
       "oF" : 0,
       "pg" : 0
     },
-    "\/template-parts\/card-drag.php" : {
+    "\/template-parts\/card-future.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/card-drag.php",
+      "oAP" : "\/template-parts\/card-future.php",
       "oF" : 0
     },
-    "\/template-parts\/card-modal.php" : {
+    "\/template-parts\/misc\/modal-misc.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/card-modal.php",
-      "oF" : 0
-    },
-    "\/template-parts\/modal.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/template-parts\/modal.php",
+      "oAP" : "\/template-parts\/misc\/modal-misc.php",
       "oF" : 0
     },
     "\/template-parts\/nav-walker5.php" : {
