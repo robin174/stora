@@ -410,6 +410,15 @@ nav a:disabled, nav .nav-link:disabled {
   padding: 10px;
   margin: 5px;
 }
+.templ--page-drag .mol--artboard .comparison-costs-column .col.color-cloud {
+  background-color: rgba(0, 0, 255, 0.03);
+}
+.templ--page-drag .mol--artboard .comparison-costs-column .col.color-decentral {
+  background-color: rgba(0, 128, 0, 0.07);
+}
+.templ--page-drag .mol--artboard .comparison-costs-column .col.color-onprem {
+  background-color: rgba(255, 165, 0, 0.07);
+}
 
 .cost-comparison {
   margin-top: 20px;

@@ -83,7 +83,7 @@ get_header(); ?>
                     <div class="comparison-costs-column">
                         <!-- Row 1 -->
                         <div class="row" data-row="1">
-                            <div class="col" data-column="1">
+                            <div class="col color-cloud" data-column="1">
                                 <?php 
                                     get_template_part('template-parts/card-future', null, [
                                         'card_id' => 1, 
@@ -93,13 +93,13 @@ get_header(); ?>
                                     ]); 
                                 ?>
                             </div>
-                            <div class="col" data-column="2"></div>
-                            <div class="col" data-column="3"></div>
+                            <div class="col color-decentral" data-column="2"></div>
+                            <div class="col color-onprem" data-column="3"></div>
                         </div>
 
                         <!-- Row 2 -->
                         <div class="row" data-row="2">
-                            <div class="col" data-column="1">
+                            <div class="col color-cloud" data-column="1">
                                 <?php 
                                     get_template_part('template-parts/card-future', null, [
                                         'card_id' => 2, 
@@ -109,13 +109,13 @@ get_header(); ?>
                                     ]); 
                                 ?>
                             </div>
-                            <div class="col" data-column="2"></div>
-                            <div class="col" data-column="3"></div>
+                            <div class="col color-decentral" data-column="2"></div>
+                            <div class="col color-onprem" data-column="3"></div>
                         </div>
 
                         <!-- Row 3 -->
                         <div class="row" data-row="3">
-                            <div class="col" data-column="1">
+                            <div class="col color-cloud" data-column="1">
                                 <?php 
                                     get_template_part('template-parts/card-future', null, [
                                         'card_id' => 3, 
@@ -125,8 +125,8 @@ get_header(); ?>
                                     ]); 
                                 ?>
                             </div>
-                            <div class="col" data-column="2"></div>
-                            <div class="col" data-column="3"></div>
+                            <div class="col color-decentral" data-column="2"></div>
+                            <div class="col color-onprem" data-column="3"></div>
                         </div>
                     </div>
 

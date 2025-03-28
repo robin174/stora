@@ -26,6 +26,15 @@
 				background: rgba($color--primary, 0.05);
 				padding: 10px;
 				margin: 5px;
+				&.color-cloud {
+					background-color: rgba(blue, 0.03);
+				}
+				&.color-decentral {
+					background-color: rgba(green, 0.07);
+				}
+				&.color-onprem {
+					background-color: rgba(orange, 0.07);
+				}
 			}
 		}
 	}
