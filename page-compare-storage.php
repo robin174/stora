@@ -197,29 +197,34 @@ get_header(); ?>
                     <!-- Fields shown for Cloud & Decentralized storage -->
                     <div class="mb-1">
                         <label for="cardTitle" class="form-label">Card Title</label>
-                        <input type="text" class="form-control" id="cardTitle">
+                        <input type="text" class="form-control form-control-sm" id="cardTitle">
                     </div>
                     <div class="mb-1 storage-fields">
                         <label for="cardProvider" class="form-label">Provider</label>
-                        <select class="form-select" id="cardProvider">
+                        <select class="form-select form-select-sm" id="cardProvider">
                             <option value="0">- Please select</option>
                         </select>
                     </div>
 
                     <div class="mb-3 storage-fields">
                         <label for="cardNumber" class="form-label">Number of TBs</label>
-                        <input type="number" class="form-control" id="cardNumber" min="0">
+                        <input type="number" class="form-control form-control-sm" id="cardNumber" min="0">
+                    </div>
+
+                    <div class="mb-3 storage-fields">
+                        <label for="cardAdditional" class="form-label">Additional (e.g. egress)</label>
+                        <input type="number" class="form-control form-control-sm" id="cardAdditional" min="0">
                     </div>
 
                     <!-- Fields shown only for On-Prem storage -->
                     <div class="mb-1 onprem-fields" style="display: none;">
                         <label for="costPerServer" class="form-label">Cost per Server (USD)</label>
-                        <input type="number" class="form-control" id="costPerServer" min="0">
+                        <input type="number" class="form-control form-control-sm" id="costPerServer" min="0">
                     </div>
 
                     <div class="mb-3 onprem-fields" style="display: none;">
                         <label for="numberOfServers" class="form-label">Number of Servers</label>
-                        <input type="number" class="form-control" id="numberOfServers" min="0">
+                        <input type="number" class="form-control form-control-sm" id="numberOfServers" min="0">
                     </div>
                     <p id="calculatedCost">Total Cost: $0.00</p>
                 </form>
